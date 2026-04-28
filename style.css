@@ -98,7 +98,7 @@ nav a:hover { color: var(--accent); }
   inset: 0;
   background:
     linear-gradient(to bottom, rgba(13,17,23,0.25) 0%, rgba(13,17,23,0.88) 100%),
-    url('img_2445') center/cover no-repeat;
+    url('IMG_2445.jpeg') center/cover no-repeat;
   z-index: 0;
 }
 
