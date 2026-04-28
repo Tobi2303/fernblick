@@ -55,69 +55,15 @@
   <h2 class="lang-de">Ausgewählte Aufnahmen</h2>
   <h2 class="lang-en">Selected Works</h2>
 
-  <div class="gallery-grid">
+  <div class="gallery-grid" id="gallery-grid"></div>
 
-    <div class="photo-card" onclick="openModal('Kegelrobbe in Brandung', 'IMG_2391.JPG')">
-      <img src="IMG_2391.JPG" alt="Kegelrobbe in Brandung" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Kegelrobbe in Brandung</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
-    <div class="photo-card" onclick="openModal('Palmeninsel im Sonnenuntergang', 'IMG_2771.JPG')">
-      <img src="IMG_2771.JPG" alt="Palmeninsel im Sonnenuntergang" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Palmeninsel im Sonnenuntergang</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
-    <div class="photo-card" onclick="openModal('Sonnenuntergang Palmen', 'IMG_2690.JPG')">
-      <img src="IMG_2690.JPG" alt="Sonnenuntergang Palmen" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Sonnenuntergang Palmen</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
-    <div class="photo-card" onclick="openModal('Leuchtturm beim Sonnenaufgang', 'IMG_2323.JPG')">
-      <img src="IMG_2323.JPG" alt="Leuchtturm beim Sonnenaufgang" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Leuchtturm beim Sonnenaufgang</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
-    <div class="photo-card" onclick="openModal('Ammenhai', 'IMG_20250417_132550_423.jpg')">
-      <img src="IMG_20250417_132550_423.jpg" alt="Ammenhai" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Ammenhai</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
-    <div class="photo-card" onclick="openModal('Palme im Sonnenschein', 'IMG_2721.JPG')">
-      <img src="IMG_2721.JPG" alt="Palme im Sonnenschein" loading="lazy"/>
-      <div class="photo-overlay">
-        <div class="photo-title">Palme im Sonnenschein</div>
-        <div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>
-        <div class="photo-buy lang-en">from €9.90 · Buy</div>
-      </div>
-    </div>
-
+  <div style="text-align:center; margin-top:2.5rem;">
+    <button id="load-more-btn" onclick="loadMore()" style="cursor:pointer; padding:0.9rem 2.5rem; border:1px solid var(--accent); color:var(--accent); background:none; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; border-radius:2px; font-family:inherit; transition:all 0.2s;">
+      <span class="lang-de">Mehr anzeigen</span>
+      <span class="lang-en">Load more</span>
+    </button>
+    <p id="photo-count" style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem;"></p>
   </div>
-
-  <p style="text-align:center; margin-top:2.5rem; font-size:0.8rem; color:var(--text-muted); letter-spacing:1px;">
-    <span class="lang-de">✦ Ersetze die Platzhalterbilder durch deine eigenen Fotos – siehe README.md</span>
-    <span class="lang-en">✦ Replace placeholder images with your own photos – see README.md</span>
-  </p>
-</div>
 
 <!-- ─── PREISE & LIZENZEN ─── -->
 <div id="preise" style="background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
@@ -377,6 +323,110 @@
     document.getElementById('paypal-checkout-btn-en').style.opacity = '1';
     document.getElementById('paypal-checkout-btn-en').style.pointerEvents = 'auto';
   }
+
+
+  // ─── ALL 64 PHOTOS ───
+  const allPhotos = [
+    {file:'DSC00450 - 1.jpg', title:'DSC00450'},
+    {file:'DSC04045.jpg', title:'DSC04045'},
+    {file:'DSC04048.jpg', title:'DSC04048'},
+    {file:'DSC04456.jpg', title:'DSC04456'},
+    {file:'DSC04534 - 1.jpg', title:'DSC04534'},
+    {file:'DSC04540.jpg', title:'DSC04540'},
+    {file:'DSC04541.jpg', title:'DSC04541'},
+    {file:'DSC04602.jpg', title:'DSC04602'},
+    {file:'DSC04617.jpg', title:'DSC04617'},
+    {file:'IMG_1107.JPG', title:'IMG 1107'},
+    {file:'IMG_1300.JPG', title:'IMG 1300'},
+    {file:'IMG_1329.JPG', title:'IMG 1329'},
+    {file:'IMG_1353.JPG', title:'IMG 1353'},
+    {file:'IMG_1826.JPG', title:'IMG 1826'},
+    {file:'IMG_1827.JPG', title:'IMG 1827'},
+    {file:'IMG_1828.JPG', title:'IMG 1828'},
+    {file:'IMG_1833.JPG', title:'IMG 1833'},
+    {file:'IMG_1835.JPG', title:'IMG 1835'},
+    {file:'IMG_2005.JPG', title:'IMG 2005'},
+    {file:'IMG_20250417_132550_423.jpg', title:'Ammenhai'},
+    {file:'IMG_2026.JPG', title:'IMG 2026'},
+    {file:'IMG_2116.JPG', title:'IMG 2116'},
+    {file:'IMG_2222.JPG', title:'IMG 2222'},
+    {file:'IMG_2225.JPG', title:'IMG 2225'},
+    {file:'IMG_2229.JPG', title:'IMG 2229'},
+    {file:'IMG_2256.JPG', title:'IMG 2256'},
+    {file:'IMG_2262.JPG', title:'IMG 2262'},
+    {file:'IMG_2309.JPG', title:'IMG 2309'},
+    {file:'IMG_2316.JPG', title:'IMG 2316'},
+    {file:'IMG_2323.JPG', title:'Leuchtturm beim Sonnenaufgang'},
+    {file:'IMG_2324 (4).jpg', title:'IMG 2324'},
+    {file:'IMG_2361.JPG', title:'IMG 2361'},
+    {file:'IMG_2365.JPG', title:'IMG 2365'},
+    {file:'IMG_2374.JPG', title:'IMG 2374'},
+    {file:'IMG_2390.JPG', title:'IMG 2390'},
+    {file:'IMG_2391.JPG', title:'Kegelrobbe in Brandung'},
+    {file:'IMG_2392.JPG', title:'IMG 2392'},
+    {file:'IMG_2395.JPG', title:'IMG 2395'},
+    {file:'IMG_2398.JPG', title:'IMG 2398'},
+    {file:'IMG_2399.JPG', title:'IMG 2399'},
+    {file:'IMG_2445.JPG', title:'IMG 2445'},
+    {file:'IMG_2630.JPG', title:'IMG 2630'},
+    {file:'IMG_2684.JPG', title:'IMG 2684'},
+    {file:'IMG_2686.JPG', title:'IMG 2686'},
+    {file:'IMG_2688.JPG', title:'IMG 2688'},
+    {file:'IMG_2689.JPG', title:'IMG 2689'},
+    {file:'IMG_2690.JPG', title:'Sonnenuntergang Palmen'},
+    {file:'IMG_2694.JPG', title:'IMG 2694'},
+    {file:'IMG_2702.JPG', title:'IMG 2702'},
+    {file:'IMG_2721.JPG', title:'Palme im Sonnenschein'},
+    {file:'IMG_2729.JPG', title:'IMG 2729'},
+    {file:'IMG_2747(1)(1).jpg', title:'IMG 2747'},
+    {file:'IMG_2748.JPG', title:'IMG 2748'},
+    {file:'IMG_2767.JPG', title:'IMG 2767'},
+    {file:'IMG_2770.JPG', title:'IMG 2770'},
+    {file:'IMG_2771.JPG', title:'Palmeninsel im Sonnenuntergang'},
+    {file:'IMG_2772.JPG', title:'IMG 2772'},
+    {file:'IMG_2773.JPG', title:'IMG 2773'},
+    {file:'IMG_2776.JPG', title:'IMG 2776'},
+    {file:'IMG_2790.JPG', title:'IMG 2790'},
+    {file:'IMG_2800.JPG', title:'IMG 2800'},
+    {file:'IMG_2820.JPG', title:'IMG 2820'},
+    {file:'IMG_2826.JPG', title:'IMG 2826'},
+    {file:'IMG_2834.JPG', title:'IMG 2834'},
+  ];
+
+  const PER_PAGE = 12;
+  let loaded = 0;
+
+  function createCard(photo) {
+    const card = document.createElement('div');
+    card.className = 'photo-card';
+    card.onclick = () => openModal(photo.title, photo.file);
+    card.innerHTML = '<img src="' + photo.file + '" alt="' + photo.title + '" loading="lazy"/>' +
+      '<div class="photo-overlay">' +
+      '<div class="photo-title">' + photo.title + '</div>' +
+      '<div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>' +
+      '<div class="photo-buy lang-en">from €9.90 · Buy</div>' +
+      '</div>';
+    return card;
+  }
+
+  function updateCount() {
+    const shown = Math.min(loaded, allPhotos.length);
+    document.getElementById('photo-count').textContent = shown + ' / ' + allPhotos.length + ' Fotos';
+    const btn = document.getElementById('load-more-btn');
+    if (loaded >= allPhotos.length) btn.style.display = 'none';
+  }
+
+  function loadMore() {
+    const grid = document.getElementById('gallery-grid');
+    const end = Math.min(loaded + PER_PAGE, allPhotos.length);
+    for (let i = loaded; i < end; i++) {
+      grid.appendChild(createCard(allPhotos[i]));
+    }
+    loaded = end;
+    updateCount();
+  }
+
+  loadMore();
 
   // Smooth scroll for nav
   document.querySelectorAll('a[href^="#"]').forEach(a => {
