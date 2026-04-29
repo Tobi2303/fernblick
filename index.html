@@ -96,8 +96,8 @@
           <li class="lang-de">1 Nutzungslizenz</li>
           <li class="lang-en">1 usage license</li>
         </ul>
-        <a href="https://www.paypal.com/paypalme/tobi2303/9.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
-        <a href="https://www.paypal.com/paypalme/tobi2303/9.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Privat+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Privat+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
       </div>
 
       <!-- BLOG/SOCIAL -->
@@ -120,8 +120,8 @@
           <li class="lang-de">Namensnennung erbeten</li>
           <li class="lang-en">Attribution appreciated</li>
         </ul>
-        <a href="https://www.paypal.com/paypalme/tobi2303/19.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
-        <a href="https://www.paypal.com/paypalme/tobi2303/19.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
       </div>
 
       <!-- KOMMERZIELL -->
@@ -143,8 +143,8 @@
           <li class="lang-de">Digitale Lizenzurkunde</li>
           <li class="lang-en">Digital license certificate</li>
         </ul>
-        <a href="https://www.paypal.com/paypalme/tobi2303/49.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
-        <a href="https://www.paypal.com/paypalme/tobi2303/49.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Kommerziell+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Kommerziell+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
       </div>
 
       <!-- EXTENDED -->
@@ -166,8 +166,8 @@
           <li class="lang-de">Digitale Lizenzurkunde</li>
           <li class="lang-en">Digital license certificate</li>
         </ul>
-        <a href="https://www.paypal.com/paypalme/tobi2303/99.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
-        <a href="https://www.paypal.com/paypalme/tobi2303/99.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
       </div>
 
     </div>
@@ -220,21 +220,21 @@
     <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;" class="lang-en">Select license, then purchase via PayPal:</p>
     <img id="modal-img" class="modal-photo" src="" alt=""/>
     <div class="modal-licenses">
-      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','9.90')">
+      <button class="lic-btn" onclick="selectLicense(this,'','9.90')">
         <div class="lic-name lang-de">Privat</div>
         <div class="lic-name lang-en">Personal</div>
         <div class="lic-price">€ 9,90</div>
       </button>
-      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','19.90')">
+      <button class="lic-btn" onclick="selectLicense(this,'','19.90')">
         <div class="lic-name">Blog / Social</div>
         <div class="lic-price">€ 19,90</div>
       </button>
-      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','49.90')">
+      <button class="lic-btn" onclick="selectLicense(this,'','49.90')">
         <div class="lic-name lang-de">Kommerziell</div>
         <div class="lic-name lang-en">Commercial</div>
         <div class="lic-price">€ 49,90</div>
       </button>
-      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','99.90')">
+      <button class="lic-btn" onclick="selectLicense(this,'','99.90')">
         <div class="lic-name">Extended</div>
         <div class="lic-price">€ 99,90</div>
       </button>
@@ -315,7 +315,7 @@
   function selectLicense(btn, paypalName, amount) {
     document.querySelectorAll('.lic-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
-    const url = 'https://www.paypal.com/paypalme/' + paypalName + '/' + amount;
+    const url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=' + amount + '&item_name=Fernblick+Foto+Lizenz';
     document.getElementById('paypal-checkout-btn').href = url;
     document.getElementById('paypal-checkout-btn').style.opacity = '1';
     document.getElementById('paypal-checkout-btn').style.pointerEvents = 'auto';
