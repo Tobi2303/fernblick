@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fernblick – Landschafts- & Naturfotografie von Tobias. Digitale Drucke zum Download."/>
+  <title>Fernblick – Naturfotografie by Tobias</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔</text></svg>"/>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <a href="index.html" class="logo">Fern<span>blick</span></a>
+  <nav>
+    <a href="#galerie" class="lang-de">Galerie</a>
+    <a href="#galerie" class="lang-en">Gallery</a>
+    <a href="#preise" class="lang-de">Preise</a>
+    <a href="#preise" class="lang-en">Pricing</a>
+    <a href="#ueber" class="lang-de">Über mich</a>
+    <a href="#ueber" class="lang-en">About</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Naturfotografie · Fine Art Prints</p>
+    <h1>Fern<span>blick</span></h1>
+    <p class="lang-de">Landschaften, die atmen. Momente, die bleiben. Digitale Fine-Art-Prints zum sofortigen Download.</p>
+    <p class="lang-en">Landscapes that breathe. Moments that last. Digital fine-art prints available for instant download.</p>
+    <div class="hero-btns">
+      <a href="#galerie" class="btn-primary lang-de">Galerie entdecken</a>
+      <a href="#galerie" class="btn-primary lang-en">Explore Gallery</a>
+      <a href="#preise" class="btn-outline lang-de">Preise & Lizenzen</a>
+      <a href="#preise" class="btn-outline lang-en">Pricing & Licenses</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── GALERIE ─── -->
+<div id="galerie" class="section-wrap border-top">
+  <span class="section-label lang-de">Galerie</span>
+  <span class="section-label lang-en">Gallery</span>
+  <h2 class="lang-de">Ausgewählte Aufnahmen</h2>
+  <h2 class="lang-en">Selected Works</h2>
+
+  <div class="gallery-grid" id="gallery-grid"></div>
+
+  <div style="text-align:center; margin-top:2.5rem;">
+    <button id="load-more-btn" onclick="loadMore()" style="cursor:pointer; padding:0.9rem 2.5rem; border:1px solid var(--accent); color:var(--accent); background:none; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; border-radius:2px; font-family:inherit; transition:all 0.2s;">
+      <span class="lang-de">Mehr anzeigen</span>
+      <span class="lang-en">Load more</span>
+    </button>
+    <p id="photo-count" style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem;"></p>
+  </div>
+
+<!-- ─── PREISE & LIZENZEN ─── -->
+<div id="preise" style="background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-wrap">
+    <span class="section-label lang-de">Preise & Lizenzen</span>
+    <span class="section-label lang-en">Pricing & Licenses</span>
+    <h2 class="lang-de">Jedes Bild. Deine Nutzung.</h2>
+    <h2 class="lang-en">Every image. Your use.</h2>
+    <p class="pricing-intro lang-de">Alle Fotos sind als hochauflösender digitaler Download erhältlich. Wähle die Lizenz, die zu deinem Verwendungszweck passt. Preise gelten pro Bild.</p>
+    <p class="pricing-intro lang-en">All photos are available as high-resolution digital downloads. Choose the license that fits your intended use. Prices apply per image.</p>
+
+    <div class="pricing-grid">
+
+      <!-- PRIVAT -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Privat</div>
+        <div class="price-tier lang-en">Personal</div>
+        <div class="price-amount"><sup>€</sup>9<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <ul class="price-features">
+          <li class="lang-de">Privater Druck (bis A2)</li>
+          <li class="lang-en">Private print (up to A2)</li>
+          <li class="lang-de">Keine kommerzielle Nutzung</li>
+          <li class="lang-en">No commercial use</li>
+          <li class="lang-de">JPG in hoher Auflösung</li>
+          <li class="lang-en">High-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">1 Nutzungslizenz</li>
+          <li class="lang-en">1 usage license</li>
+        </ul>
+        <a href="https://www.paypal.com/paypalme/tobi2303/9.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/paypalme/tobi2303/9.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- BLOG/SOCIAL -->
+      <div class="price-card featured">
+        <div class="price-badge lang-de">Beliebt</div>
+        <div class="price-badge lang-en">Popular</div>
+        <div class="price-tier">Blog / Social</div>
+        <div class="price-amount"><sup>€</sup>19<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <ul class="price-features">
+          <li class="lang-de">Blog, Social Media, Website</li>
+          <li class="lang-en">Blog, social media, website</li>
+          <li class="lang-de">Nicht-kommerzieller Inhalt</li>
+          <li class="lang-en">Non-commercial content</li>
+          <li class="lang-de">JPG in voller Auflösung</li>
+          <li class="lang-en">Full-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">Namensnennung erbeten</li>
+          <li class="lang-en">Attribution appreciated</li>
+        </ul>
+        <a href="https://www.paypal.com/paypalme/tobi2303/19.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/paypalme/tobi2303/19.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- KOMMERZIELL -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Kommerziell</div>
+        <div class="price-tier lang-en">Commercial</div>
+        <div class="price-amount"><sup>€</sup>49<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <ul class="price-features">
+          <li class="lang-de">Werbung, Produkte, Druck</li>
+          <li class="lang-en">Ads, products, print runs</li>
+          <li class="lang-de">Bis 10.000 Exemplare</li>
+          <li class="lang-en">Up to 10,000 copies</li>
+          <li class="lang-de">JPG in voller Auflösung</li>
+          <li class="lang-en">Full-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">Digitale Lizenzurkunde</li>
+          <li class="lang-en">Digital license certificate</li>
+        </ul>
+        <a href="https://www.paypal.com/paypalme/tobi2303/49.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/paypalme/tobi2303/49.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- EXTENDED -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Extended</div>
+        <div class="price-tier lang-en">Extended</div>
+        <div class="price-amount"><sup>€</sup>99<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <ul class="price-features">
+          <li class="lang-de">Unbegrenzte Nutzung</li>
+          <li class="lang-en">Unlimited usage</li>
+          <li class="lang-de">Alle Medien & Druckmengen</li>
+          <li class="lang-en">All media & print runs</li>
+          <li class="lang-de">JPG + TIFF in Rohauflösung</li>
+          <li class="lang-en">JPG + TIFF in raw resolution</li>
+          <li class="lang-de">Exklusive Gebietsrechte mögl.</li>
+          <li class="lang-en">Exclusive territory rights opt.</li>
+          <li class="lang-de">Digitale Lizenzurkunde</li>
+          <li class="lang-en">Digital license certificate</li>
+        </ul>
+        <a href="https://www.paypal.com/paypalme/tobi2303/99.90" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/paypalme/tobi2303/99.90" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+    </div>
+
+    <!-- Hinweis Widerruf -->
+    <div class="info-box" style="margin-top:2.5rem;">
+      <p class="lang-de" style="font-size:0.82rem; color:var(--text-muted);">
+        ⓘ <strong style="color:var(--text);">Hinweis:</strong> Mit dem Kauf eines digitalen Downloads bestätigst du, dass du auf dein Widerrufsrecht verzichtest, sobald der Download bereitgestellt wird (§ 356 Abs. 5 BGB). Alle Preise inkl. MwSt. (Kleinunternehmer gem. § 19 UStG). Zahlung via PayPal. Nach Zahlungseingang erhältst du den Downloadlink per E-Mail.
+      </p>
+      <p class="lang-en" style="font-size:0.82rem; color:var(--text-muted);">
+        ⓘ <strong style="color:var(--text);">Note:</strong> By purchasing a digital download, you agree to waive your right of withdrawal once the download is made available. All prices include VAT (small business exemption). Payment via PayPal. After payment confirmation, you will receive the download link by email.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── ÜBER MICH ─── -->
+<div id="ueber" class="section-wrap">
+  <span class="section-label lang-de">Über mich</span>
+  <span class="section-label lang-en">About Me</span>
+  <div class="about-grid">
+    <img class="about-img" src="https://images.unsplash.com/photo-1552168324-d612d77725e3?w=500&q=80" alt="Tobias – Fotograf" loading="lazy"/>
+    <div class="about-text">
+      <h2 class="lang-de">Hinter der Linse</h2>
+      <h2 class="lang-en">Behind the Lens</h2>
+      <p class="lang-de">
+        Hallo, ich bin Tobias – Ingenieur, Familienvater und leidenschaftlicher Naturfotograf. Die Natur ist mein Ausgleich, die Kamera mein Werkzeug. Was ich festhalte, sind keine Fotos – es sind Momente, in denen die Welt für einen Augenblick den Atem anhält.
+      </p>
+      <p class="lang-en">
+        Hi, I'm Tobias – an engineer, father, and passionate nature photographer. Nature is my balance, the camera my tool. What I capture aren't just photographs – they are moments when the world holds its breath for an instant.
+      </p>
+      <p class="lang-de">
+        Meine Reisen führen mich durch Bergwälder, an raue Küsten und in stille Täler. Jedes Bild entsteht mit dem Respekt vor dem Augenblick – und der Geduld, auf ihn zu warten.
+      </p>
+      <p class="lang-en">
+        My journeys take me through mountain forests, along rugged coastlines, and into quiet valleys. Every image is created with respect for the moment – and the patience to wait for it.
+      </p>
+      <a href="mailto:DEINE-EMAIL@example.com" class="btn-outline lang-de" style="margin-top:1.5rem; display:inline-block;">Kontakt aufnehmen</a>
+      <a href="mailto:DEINE-EMAIL@example.com" class="btn-outline lang-en" style="margin-top:1.5rem; display:inline-block;">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PHOTO MODAL ─── -->
+<div class="modal-overlay" id="modal" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3 id="modal-title">Foto</h3>
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;" class="lang-de">Lizenz auswählen, dann mit PayPal kaufen:</p>
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;" class="lang-en">Select license, then purchase via PayPal:</p>
+    <img id="modal-img" class="modal-photo" src="" alt=""/>
+    <div class="modal-licenses">
+      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','9.90')">
+        <div class="lic-name lang-de">Privat</div>
+        <div class="lic-name lang-en">Personal</div>
+        <div class="lic-price">€ 9,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','19.90')">
+        <div class="lic-name">Blog / Social</div>
+        <div class="lic-price">€ 19,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','49.90')">
+        <div class="lic-name lang-de">Kommerziell</div>
+        <div class="lic-name lang-en">Commercial</div>
+        <div class="lic-price">€ 49,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'tobi2303','99.90')">
+        <div class="lic-name">Extended</div>
+        <div class="lic-price">€ 99,90</div>
+      </button>
+    </div>
+    <p class="checkout-notice lang-de">
+      ✓ Mit dem Kauf bestätige ich, dass ich auf mein Widerrufsrecht verzichte, sobald der Download bereitgestellt wird, und stimme den <a href="agb.html">AGB</a> zu.
+    </p>
+    <p class="checkout-notice lang-en">
+      ✓ By purchasing I confirm that I waive my right of withdrawal once the download is made available, and agree to the <a href="agb.html">Terms & Conditions</a>.
+    </p>
+    <a id="paypal-checkout-btn" href="#" target="_blank" class="paypal-btn lang-de" style="pointer-events:none; opacity:0.4;">Lizenz wählen → PayPal</a>
+    <a id="paypal-checkout-btn-en" href="#" target="_blank" class="paypal-btn lang-en" style="pointer-events:none; opacity:0.4;">Select license → PayPal</a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">Fern<span>blick</span></div>
+  <div class="footer-tagline lang-de">Naturfotografie · Fine Art Prints · by Tobias</div>
+  <div class="footer-tagline lang-en">Nature Photography · Fine Art Prints · by Tobias</div>
+  <div class="footer-links">
+    <a href="impressum.html" class="lang-de">Impressum</a>
+    <a href="impressum.html" class="lang-en">Legal Notice</a>
+    <a href="datenschutz.html" class="lang-de">Datenschutz</a>
+    <a href="datenschutz.html" class="lang-en">Privacy Policy</a>
+    <a href="agb.html" class="lang-de">AGB</a>
+    <a href="agb.html" class="lang-en">Terms & Conditions</a>
+    <a href="widerruf.html" class="lang-de">Widerruf</a>
+    <a href="widerruf.html" class="lang-en">Right of Withdrawal</a>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Tobias – Fernblick Naturfotografie. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function setLang(lang) {
+    if (lang === 'en') {
+      document.body.classList.add('lang-en');
+      document.getElementById('btn-en').classList.add('active');
+      document.getElementById('btn-de').classList.remove('active');
+      document.documentElement.lang = 'en';
+    } else {
+      document.body.classList.remove('lang-en');
+      document.getElementById('btn-de').classList.add('active');
+      document.getElementById('btn-en').classList.remove('active');
+      document.documentElement.lang = 'de';
+    }
+    localStorage.setItem('lang', lang);
+  }
+
+  // Restore language
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) setLang(savedLang);
+
+  // Modal
+  let selectedPaypalUrl = '';
+
+  function openModal(title, imgSrc) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-img').src = imgSrc;
+    document.getElementById('modal').classList.add('open');
+    document.querySelectorAll('.lic-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('paypal-checkout-btn').style.opacity = '0.4';
+    document.getElementById('paypal-checkout-btn').style.pointerEvents = 'none';
+    document.getElementById('paypal-checkout-btn-en').style.opacity = '0.4';
+    document.getElementById('paypal-checkout-btn-en').style.pointerEvents = 'none';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+
+  function closeModalOnBg(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  function selectLicense(btn, paypalName, amount) {
+    document.querySelectorAll('.lic-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    const url = 'https://www.paypal.com/paypalme/' + paypalName + '/' + amount;
+    document.getElementById('paypal-checkout-btn').href = url;
+    document.getElementById('paypal-checkout-btn').style.opacity = '1';
+    document.getElementById('paypal-checkout-btn').style.pointerEvents = 'auto';
+    document.getElementById('paypal-checkout-btn-en').href = url;
+    document.getElementById('paypal-checkout-btn-en').style.opacity = '1';
+    document.getElementById('paypal-checkout-btn-en').style.pointerEvents = 'auto';
+  }
+
+
+  // ─── ALL 64 PHOTOS ───
+    const allPhotos = [
+    {file:'DSC00450 - 1.jpg', title:'Venedig abseits'},
+    {file:'DSC04045.jpg', title:'Almhütte bei Nacht'},
+    {file:'DSC04048.jpg', title:'Nachtlicht'},
+    {file:'DSC04456.jpg', title:'Sonnenuntergang Bergwelten im Winter'},
+    {file:'DSC04540.jpg', title:'Nebelschwaden im Sonnenaufgang'},
+    {file:'DSC04541.jpg', title:'Nebelschwaden im Bergparadies'},
+    {file:'DSC04602.jpg', title:'Sonnenaufgang Almhütte am Morgen'},
+    {file:'IMG_1107.JPG', title:'Honigbiene im Lavendel'},
+    {file:'IMG_1329.JPG', title:'Bergbach im Stillstand'},
+    {file:'IMG_1826.JPG', title:'Raubfliege'},
+    {file:'IMG_1833.JPG', title:'Harlekin Marienkäfer'},
+    {file:'IMG_1835.JPG', title:'Honigbiene trinkt'},
+    {file:'IMG_20250417_132550_423.jpg', title:'Ammenhai'},
+    {file:'IMG_2026.JPG', title:'Silbermöwen im Flug'},
+    {file:'IMG_2116.JPG', title:'Longhorn mit Kalb'},
+    {file:'IMG_2225.JPG', title:'Leuchtturm im Morgenlicht'},
+    {file:'IMG_2229.JPG', title:'Helgoland Düne im Sonnenaufgang'},
+    {file:'IMG_2256.JPG', title:'Leuchtturm Helgoland Düne'},
+    {file:'IMG_2262.JPG', title:'Sonnenaufgang an der See'},
+    {file:'IMG_2309.JPG', title:'Baby Kegelrobbe'},
+    {file:'IMG_2316.JPG', title:'Junge Kegelrobbe'},
+    {file:'IMG_2323.JPG', title:'Die Zeit steht still'},
+    {file:'IMG_2324 (4).jpg', title:'Sonnenuntergang am Leuchtturm'},
+    {file:'IMG_2365.JPG', title:'Helgoland Düne'},
+    {file:'IMG_2374.JPG', title:'Helgoland'},
+    {file:'IMG_2391.JPG', title:'Kegelrobbe in Brandung'},
+    {file:'IMG_2395.JPG', title:'Kegelrobben'},
+    {file:'IMG_2398.JPG', title:'Stare im Schwarm'},
+    {file:'IMG_2399.JPG', title:'Stare im Flug'},
+    {file:'IMG_2445.JPG', title:'Mystischer Leuchtturm'},
+    {file:'IMG_2684.JPG', title:'Waterbungalows Maledives'},
+    {file:'IMG_2686.JPG', title:'Palmen im Sonnenschein'},
+    {file:'IMG_2688.JPG', title:'Sonnenbrille'},
+    {file:'IMG_2690.JPG', title:'Palmeninsel im Sonnenuntergang'},
+    {file:'IMG_2694.JPG', title:'Malediven goldene Stunde'},
+    {file:'IMG_2702.JPG', title:'Malediven goldene Stunde II'},
+    {file:'IMG_2721.JPG', title:'Palme im Sonnenlicht'},
+    {file:'IMG_2729.JPG', title:'Goldene Stunde am Strand'},
+    {file:'IMG_2747(1)(1).jpg', title:'Sonnensittich'},
+    {file:'IMG_2748.JPG', title:'Sonnensittich am Strand'},
+    {file:'IMG_2767.JPG', title:'Malediven'},
+    {file:'IMG_2771.JPG', title:'Goldenhour Maledives'},
+    {file:'IMG_2772.JPG', title:'Einsiedlerkrebs in der Goldenen Stunde'},
+    {file:'IMG_2773.JPG', title:'Einsiedlerkrebs in der Goldenen Stunde'},
+    {file:'IMG_2776.JPG', title:'Palmen im Farbenrausch'},
+    {file:'IMG_2800.JPG', title:'Traumorte'},
+    {file:'IMG_2820.JPG', title:'Palme'},
+    {file:'IMG_2826.JPG', title:'Strandauszeit'},
+    {file:'IMG_2834.JPG', title:'Goldenes Licht am Meer'},
+    {file:'leuchtturm-duenen.jpg', title:'Leuchtturm in den Dünen'},
+    {file:'meeresschaum-abendlicht.jpg', title:'Meeresschaum im Abendlicht'},
+    {file:'nordsee-gegenlicht.jpg', title:'Nordsee im Gegenlicht'},
+    {file:'duenenweg-ans-meer.jpg', title:'Dünenweg ans Meer'},
+    {file:'strandhafer-wind.jpg', title:'Strandhafer im Wind'},
+    {file:'durch-die-duenen.jpg', title:'Durch die Dünen'},
+    {file:'moewen-watt.jpg', title:'Möwen über dem Watt'},
+    {file:'strandlaeufer-watt.jpg', title:'Strandläufer im Watt'},
+    {file:'wolkenspiegelung-watt.jpg', title:'Wolkenspiegelung im Watt'},
+    {file:'goldene-stunde-wattenmeer.jpg', title:'Goldene Stunde im Wattenmeer'},
+    {file:'herzmuscheln-strand.jpg', title:'Herzmuscheln am Strand'},
+    {file:'silbermoewe-abendlicht.jpg', title:'Silbermöwe im Abendlicht'},
+    {file:'seehund-watt.jpg', title:'Seehund im Watt'},
+    {file:'kindheit-am-meer.jpg', title:'Kindheit am Meer'},
+  ];
+
+  const PER_PAGE = 12;
+  let loaded = 0;
+
+  function createCard(photo) {
+    const card = document.createElement('div');
+    card.className = 'photo-card';
+    card.onclick = () => openModal(photo.title, photo.file);
+    card.innerHTML = '<img src="' + photo.file + '" alt="' + photo.title + '" loading="lazy"/>' +
+      '<div class="photo-overlay">' +
+      '<div class="photo-title">' + photo.title + '</div>' +
+      '<div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>' +
+      '<div class="photo-buy lang-en">from €9.90 · Buy</div>' +
+      '</div>';
+    return card;
+  }
+
+  function updateCount() {
+    const shown = Math.min(loaded, allPhotos.length);
+    document.getElementById('photo-count').textContent = shown + ' / ' + allPhotos.length + ' Fotos';
+    const btn = document.getElementById('load-more-btn');
+    if (loaded >= allPhotos.length) btn.style.display = 'none';
+  }
+
+  function loadMore() {
+    const grid = document.getElementById('gallery-grid');
+    const end = Math.min(loaded + PER_PAGE, allPhotos.length);
+    for (let i = loaded; i < end; i++) {
+      grid.appendChild(createCard(allPhotos[i]));
+    }
+    loaded = end;
+    updateCount();
+  }
+
+  loadMore();
+
+  // Smooth scroll for nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
