@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Fernblick – Landschafts- & Naturfotografie von Tobias. Digitale Drucke zum Download."/>
+  <title>Fernblick – Naturfotografie by Tobias</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏔</text></svg>"/>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <a href="index.html" class="logo">Fern<span>blick</span></a>
+  <nav>
+    <a href="#galerie" class="lang-de">Galerie</a>
+    <a href="#galerie" class="lang-en">Gallery</a>
+    <a href="#kalender" class="lang-de">Kalender</a>
+    <a href="#kalender" class="lang-en">Calendar</a>
+    <a href="#preise" class="lang-de">Preise</a>
+    <a href="#preise" class="lang-en">Pricing</a>
+    <a href="#ueber" class="lang-de">Über mich</a>
+    <a href="#ueber" class="lang-en">About</a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-de" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Naturfotografie · Fine Art Prints</p>
+    <h1>Fern<span>blick</span></h1>
+    <p class="lang-de">Landschaften, die atmen. Momente, die bleiben. Digitale Fine-Art-Prints zum sofortigen Download.</p>
+    <p class="lang-en">Landscapes that breathe. Moments that last. Digital fine-art prints available for instant download.</p>
+    <div class="hero-btns">
+      <a href="#galerie" class="btn-primary lang-de">Galerie entdecken</a>
+      <a href="#galerie" class="btn-primary lang-en">Explore Gallery</a>
+      <a href="#preise" class="btn-outline lang-de">Preise & Lizenzen</a>
+      <a href="#preise" class="btn-outline lang-en">Pricing & Licenses</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── GALERIE ─── -->
+<div id="galerie" class="section-wrap border-top">
+  <span class="section-label lang-de">Galerie</span>
+  <span class="section-label lang-en">Gallery</span>
+  <h2 class="lang-de">Ausgewählte Aufnahmen</h2>
+  <h2 class="lang-en">Selected Works</h2>
+
+  <div class="gallery-grid" id="gallery-grid"></div>
+
+  <div style="text-align:center; margin-top:2.5rem;">
+    <button id="load-more-btn" onclick="loadMore()" style="cursor:pointer; padding:0.9rem 2.5rem; border:1px solid var(--accent); color:var(--accent); background:none; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; border-radius:2px; font-family:inherit; transition:all 0.2s;">
+      <span class="lang-de">Mehr anzeigen</span>
+      <span class="lang-en">Load more</span>
+    </button>
+    <p id="photo-count" style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem;"></p>
+  </div>
+
+<!-- ─── PREISE & LIZENZEN ─── -->
+<div id="preise" style="background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="section-wrap">
+    <span class="section-label lang-de">Preise & Lizenzen</span>
+    <span class="section-label lang-en">Pricing & Licenses</span>
+    <h2 class="lang-de">Jedes Bild. Deine Nutzung.</h2>
+    <h2 class="lang-en">Every image. Your use.</h2>
+    <p class="pricing-intro lang-de">Alle Fotos sind als hochauflösender digitaler Download erhältlich. Wähle die Lizenz, die zu deinem Verwendungszweck passt. Preise gelten pro Bild.</p>
+    <p class="pricing-intro lang-en">All photos are available as high-resolution digital downloads. Choose the license that fits your intended use. Prices apply per image.</p>
+
+    <div class="pricing-grid">
+
+      <!-- PRIVAT -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Privat</div>
+        <div class="price-tier lang-en">Personal</div>
+        <div class="price-amount"><sup>€</sup>9<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <p class="lang-de" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">Für den privaten Eigengebrauch. Foto ausdrucken und zuhause aufhängen — keine Veröffentlichung oder kommerzielle Nutzung.</p>
+        <p class="lang-en" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">For private personal use only. Print and display at home — no publication or commercial use permitted.</p>
+        <ul class="price-features">
+          <li class="lang-de">Privater Druck (bis A2)</li>
+          <li class="lang-en">Private print (up to A2)</li>
+          <li class="lang-de">Keine kommerzielle Nutzung</li>
+          <li class="lang-en">No commercial use</li>
+          <li class="lang-de">JPG in hoher Auflösung</li>
+          <li class="lang-en">High-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">1 Nutzungslizenz</li>
+          <li class="lang-en">1 usage license</li>
+        </ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Privat+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Privat+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- BLOG/SOCIAL -->
+      <div class="price-card featured">
+        <div class="price-badge lang-de">Beliebt</div>
+        <div class="price-badge lang-en">Popular</div>
+        <div class="price-tier">Blog / Social</div>
+        <div class="price-amount"><sup>€</sup>19<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <p class="lang-de" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">Für nicht-kommerzielle Blogs, private Websites und Social Media. Namensnennung "© Tobias / Fernblick" ist erwünscht.</p>
+        <p class="lang-en" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">For non-commercial blogs, personal websites and social media. Attribution "© Tobias / Fernblick" appreciated.</p>
+        <ul class="price-features">
+          <li class="lang-de">Blog, Social Media, Website</li>
+          <li class="lang-en">Blog, social media, website</li>
+          <li class="lang-de">Nicht-kommerzieller Inhalt</li>
+          <li class="lang-en">Non-commercial content</li>
+          <li class="lang-de">JPG in voller Auflösung</li>
+          <li class="lang-en">Full-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">Namensnennung erbeten</li>
+          <li class="lang-en">Attribution appreciated</li>
+        </ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- KOMMERZIELL -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Kommerziell</div>
+        <div class="price-tier lang-en">Commercial</div>
+        <div class="price-amount"><sup>€</sup>49<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <p class="lang-de" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">Für gewerbliche Nutzung — Werbematerialien, Broschüren, kommerzielle Websites und digitale Werbung. Bis 10.000 Exemplare.</p>
+        <p class="lang-en" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">For commercial use — advertising, brochures, commercial websites and digital ads. Up to 10,000 copies.</p>
+        <ul class="price-features">
+          <li class="lang-de">Werbung, Produkte, Druck</li>
+          <li class="lang-en">Ads, products, print runs</li>
+          <li class="lang-de">Bis 10.000 Exemplare</li>
+          <li class="lang-en">Up to 10,000 copies</li>
+          <li class="lang-de">JPG in voller Auflösung</li>
+          <li class="lang-en">Full-resolution JPG</li>
+          <li class="lang-de">Sofortiger Download</li>
+          <li class="lang-en">Instant download</li>
+          <li class="lang-de">Digitale Lizenzurkunde</li>
+          <li class="lang-en">Digital license certificate</li>
+        </ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Kommerziell+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Kommerziell+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+      <!-- EXTENDED -->
+      <div class="price-card">
+        <div class="price-tier lang-de">Extended</div>
+        <div class="price-tier lang-en">Extended</div>
+        <div class="price-amount"><sup>€</sup>99<small style="font-size:1.2rem">,90</small></div>
+        <div class="price-sublabel lang-de">pro Bild · einmalig</div>
+        <div class="price-sublabel lang-en">per image · one-time</div>
+        <p class="lang-de" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">Unbegrenzte Nutzung in allen Medien — TV, Film, Außenwerbung, unbegrenzte Druckmengen. Exklusive Gebietsrechte auf Anfrage.</p>
+        <p class="lang-en" style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;">Unlimited use across all media — TV, film, outdoor advertising, unlimited print runs. Exclusive territorial rights available on request.</p>
+        <ul class="price-features">
+          <li class="lang-de">Unbegrenzte Nutzung</li>
+          <li class="lang-en">Unlimited usage</li>
+          <li class="lang-de">Alle Medien & Druckmengen</li>
+          <li class="lang-en">All media & print runs</li>
+          <li class="lang-de">JPG + TIFF in Rohauflösung</li>
+          <li class="lang-en">JPG + TIFF in raw resolution</li>
+          <li class="lang-de">Exklusive Gebietsrechte mögl.</li>
+          <li class="lang-en">Exclusive territory rights opt.</li>
+          <li class="lang-de">Digitale Lizenzurkunde</li>
+          <li class="lang-en">Digital license certificate</li>
+        </ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+Lizenz" target="_blank" class="paypal-btn lang-de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+Lizenz" target="_blank" class="paypal-btn lang-en">Buy · PayPal</a>
+      </div>
+
+    </div>
+
+    <!-- Hinweis Widerruf -->
+    <div class="info-box" style="margin-top:2.5rem;">
+      <p class="lang-de" style="font-size:0.82rem; color:var(--text-muted);">
+        ⓘ <strong style="color:var(--text);">Hinweis:</strong> Mit dem Kauf eines digitalen Downloads bestätigst du, dass du auf dein Widerrufsrecht verzichtest, sobald der Download bereitgestellt wird (§ 356 Abs. 5 BGB). Alle Preise inkl. MwSt. (Kleinunternehmer gem. § 19 UStG). Zahlung via PayPal. Nach Zahlungseingang erhältst du den Downloadlink per E-Mail.
+      </p>
+      <p class="lang-en" style="font-size:0.82rem; color:var(--text-muted);">
+        ⓘ <strong style="color:var(--text);">Note:</strong> By purchasing a digital download, you agree to waive your right of withdrawal once the download is made available. All prices include VAT (small business exemption). Payment via PayPal. After payment confirmation, you will receive the download link by email.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── KALENDER ─── -->
+<div id="kalender" style="background:var(--bg); border-top:1px solid var(--border);">
+  <div class="section-wrap">
+    <span class="section-label lang-de">Kalender 2027</span>
+    <span class="section-label lang-en">Calendar 2027</span>
+    <h2 class="lang-de">Deine Lieblingsmomente. Das ganze Jahr.</h2>
+    <h2 class="lang-en">Your favourite moments. All year long.</h2>
+    <p class="pricing-intro lang-de" style="margin-bottom:2rem;">4 exklusive Designs, je in A3 und A4. Als PDF herunterladen und bei CEWE, Pixum oder dm drucken lassen — fertig ist dein persönlicher Wandkalender.</p>
+    <p class="pricing-intro lang-en" style="margin-bottom:2rem;">4 exclusive designs, each in A3 and A4. Download as PDF and print at your preferred service — your personal wall calendar is ready.</p>
+
+    <!-- 4 Kalender Cards mit Previews -->
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-bottom:3rem;">
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <!-- Image slider -->
+        <div style="position:relative;overflow:hidden;background:#0d1117;">
+          <div id="slider-1" style="display:flex;transition:transform .4s ease;width:200%;">
+            <img src="preview-stil1-cover.jpg" alt="Kalender Stil 1 Cover" style="width:50%;display:block;"/>
+            <img src="preview-stil1-monat.jpg" alt="Kalender Stil 1 Monatsseite" style="width:50%;display:block;"/>
+          </div>
+          <!-- Stil badge -->
+          <div style="position:absolute;bottom:8px;right:8px;background:rgba(10,15,20,.85);border:1px solid var(--accent);padding:3px 10px;border-radius:12px;font-size:0.65rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">Stil 1</div>
+          <!-- Slider dots -->
+          <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+            <button id="dot-1-0" onclick="showSlide(1,0)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:1;transition:opacity .2s;"></button>
+            <button id="dot-1-1" onclick="showSlide(1,1)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:0.35;transition:opacity .2s;"></button>
+          </div>
+          <!-- Prev/Next arrows -->
+          <button onclick="showSlide(1,0)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8249;</button>
+          <button onclick="showSlide(1,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8250;</button>
+        </div>
+        <!-- Labels unter Slider -->
+        <div style="display:flex;border-bottom:1px solid var(--border);">
+          <button onclick="showSlide(1,0)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-1-0">Deckblatt</button>
+          <button onclick="showSlide(1,1)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-1-1">Monatsseite</button>
+        </div>
+        <div style="padding:1.25rem;">
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-de">Dunkel-Elegant</div>
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-en">Dark-Elegant</div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-de">Dunkler Hintergrund, Foto links, Kalender rechts. Türkis-Akzente. Edel und modern.</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-en">Dark background, photo left, calendar right. Teal accents. Elegant and modern.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A4 — 9,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil1" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style1" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A3 — 12,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil1" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style1" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <!-- Image slider -->
+        <div style="position:relative;overflow:hidden;background:#0d1117;">
+          <div id="slider-2" style="display:flex;transition:transform .4s ease;width:200%;">
+            <img src="preview-stil2-cover.jpg" alt="Kalender Stil 2 Cover" style="width:50%;display:block;"/>
+            <img src="preview-stil2-monat.jpg" alt="Kalender Stil 2 Monatsseite" style="width:50%;display:block;"/>
+          </div>
+          <!-- Stil badge -->
+          <div style="position:absolute;bottom:8px;right:8px;background:rgba(10,15,20,.85);border:1px solid var(--accent);padding:3px 10px;border-radius:12px;font-size:0.65rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">Stil 2</div>
+          <!-- Slider dots -->
+          <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+            <button id="dot-2-0" onclick="showSlide(2,0)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:1;transition:opacity .2s;"></button>
+            <button id="dot-2-1" onclick="showSlide(2,1)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:0.35;transition:opacity .2s;"></button>
+          </div>
+          <!-- Prev/Next arrows -->
+          <button onclick="showSlide(2,0)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8249;</button>
+          <button onclick="showSlide(2,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8250;</button>
+        </div>
+        <!-- Labels unter Slider -->
+        <div style="display:flex;border-bottom:1px solid var(--border);">
+          <button onclick="showSlide(2,0)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-2-0">Deckblatt</button>
+          <button onclick="showSlide(2,1)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-2-1">Monatsseite</button>
+        </div>
+        <div style="padding:1.25rem;">
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-de">Hell-Minimalistisch</div>
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-en">Light-Minimal</div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-de">Weißer Hintergrund, Foto oben, Kalender unten. Rot-Akzente. Klar und zeitlos.</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-en">White background, photo top, calendar bottom. Red accents. Clean and timeless.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A4 — 9,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil2" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style2" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A3 — 12,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil2" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style2" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <!-- Image slider -->
+        <div style="position:relative;overflow:hidden;background:#0d1117;">
+          <div id="slider-3" style="display:flex;transition:transform .4s ease;width:200%;">
+            <img src="preview-stil3-cover.jpg" alt="Kalender Stil 3 Cover" style="width:50%;display:block;"/>
+            <img src="preview-stil3-monat.jpg" alt="Kalender Stil 3 Monatsseite" style="width:50%;display:block;"/>
+          </div>
+          <!-- Stil badge -->
+          <div style="position:absolute;bottom:8px;right:8px;background:rgba(10,15,20,.85);border:1px solid var(--accent);padding:3px 10px;border-radius:12px;font-size:0.65rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">Stil 3</div>
+          <!-- Slider dots -->
+          <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+            <button id="dot-3-0" onclick="showSlide(3,0)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:1;transition:opacity .2s;"></button>
+            <button id="dot-3-1" onclick="showSlide(3,1)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:0.35;transition:opacity .2s;"></button>
+          </div>
+          <!-- Prev/Next arrows -->
+          <button onclick="showSlide(3,0)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8249;</button>
+          <button onclick="showSlide(3,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8250;</button>
+        </div>
+        <!-- Labels unter Slider -->
+        <div style="display:flex;border-bottom:1px solid var(--border);">
+          <button onclick="showSlide(3,0)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-3-0">Deckblatt</button>
+          <button onclick="showSlide(3,1)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-3-1">Monatsseite</button>
+        </div>
+        <div style="padding:1.25rem;">
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-de">Bold-Magazin</div>
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-en">Bold-Magazine</div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-de">Große Monatsnummer, Foto rechts, Gold-Akzente. Dynamisch und modern.</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-en">Large month number, photo right, gold accents. Dynamic and bold.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A4 — 9,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil3" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style3" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A3 — 12,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil3" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style3" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,transform .2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='none'">
+        <!-- Image slider -->
+        <div style="position:relative;overflow:hidden;background:#0d1117;">
+          <div id="slider-4" style="display:flex;transition:transform .4s ease;width:200%;">
+            <img src="preview-stil4-cover.jpg" alt="Kalender Stil 4 Cover" style="width:50%;display:block;"/>
+            <img src="preview-stil4-monat.jpg" alt="Kalender Stil 4 Monatsseite" style="width:50%;display:block;"/>
+          </div>
+          <!-- Stil badge -->
+          <div style="position:absolute;bottom:8px;right:8px;background:rgba(10,15,20,.85);border:1px solid var(--accent);padding:3px 10px;border-radius:12px;font-size:0.65rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;">Stil 4</div>
+          <!-- Slider dots -->
+          <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;">
+            <button id="dot-4-0" onclick="showSlide(4,0)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:1;transition:opacity .2s;"></button>
+            <button id="dot-4-1" onclick="showSlide(4,1)" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;padding:0;background:var(--accent);opacity:0.35;transition:opacity .2s;"></button>
+          </div>
+          <!-- Prev/Next arrows -->
+          <button onclick="showSlide(4,0)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8249;</button>
+          <button onclick="showSlide(4,1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(10,15,20,.6);border:1px solid rgba(255,255,255,.2);color:white;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">&#8250;</button>
+        </div>
+        <!-- Labels unter Slider -->
+        <div style="display:flex;border-bottom:1px solid var(--border);">
+          <button onclick="showSlide(4,0)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-4-0">Deckblatt</button>
+          <button onclick="showSlide(4,1)" style="flex:1;padding:6px;font-size:0.68rem;letter-spacing:1px;background:transparent;border:none;cursor:pointer;color:var(--text-muted);text-transform:uppercase;" id="tab-4-1">Monatsseite</button>
+        </div>
+        <div style="padding:1.25rem;">
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-de">Galerie-Rahmen</div>
+          <div style="font-size:0.68rem;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem;" class="lang-en">Gallery-Frame</div>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-de">Klassisches weißes Layout, Foto mit Rahmen. Elegant wie eine Kunstgalerie.</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.6;" class="lang-en">Classic white layout, framed photo. Elegant like an art gallery.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A4 — 9,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil4" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style4" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.4rem;">A3 — 12,90 €</div>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil4" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+              <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style4" target="_blank" style="display:block;text-align:center;padding:.6rem;background:var(--accent);color:#0d1117;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Bundle Angebot -->
+    <div style="background:var(--bg2);border:1px solid var(--accent);border-radius:8px;padding:2rem;text-align:center;margin-bottom:2rem;position:relative;">
+      <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#0d1117;font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;padding:4px 18px;border-radius:20px;font-weight:600;" class="lang-de">Spar-Bundle</div>
+      <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#0d1117;font-size:0.65rem;letter-spacing:3px;text-transform:uppercase;padding:4px 18px;border-radius:20px;font-weight:600;" class="lang-en">Bundle Deal</div>
+      <h3 style="font-family:'Georgia',serif;font-size:1.6rem;color:var(--text);margin-bottom:0.5rem;" class="lang-de">Alle 4 Designs — ein Preis</h3>
+      <h3 style="font-family:'Georgia',serif;font-size:1.6rem;color:var(--text);margin-bottom:0.5rem;" class="lang-en">All 4 Designs — one price</h3>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;" class="lang-de">Alle 4 Kalender-PDFs in deinem Wunschformat. Du sparst über 40 % gegenüber dem Einzelkauf.</p>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem;" class="lang-en">All 4 calendar PDFs in your chosen format. Save over 40% compared to individual purchase.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:1.8rem;font-family:'Georgia',serif;color:var(--text);font-weight:700;">€ 29,90</div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.75rem;" class="lang-de">alle 4 Stile · A4</div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.75rem;" class="lang-en">all 4 styles · A4</div>
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=29.90&item_name=Fernblick+Kalender+2027+alle+4+Stile+A4" target="_blank" style="display:inline-block;padding:.8rem 2rem;background:var(--accent);color:#0d1117;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=29.90&item_name=Fernblick+Calendar+2027+all+4+styles+A4" target="_blank" style="display:inline-block;padding:.8rem 2rem;background:var(--accent);color:#0d1117;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+        </div>
+        <div>
+          <div style="font-size:1.8rem;font-family:'Georgia',serif;color:var(--text);font-weight:700;">€ 39,90</div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.75rem;" class="lang-de">alle 4 Stile · A3</div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:0.75rem;" class="lang-en">all 4 styles · A3</div>
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=39.90&item_name=Fernblick+Kalender+2027+alle+4+Stile+A3" target="_blank" style="display:inline-block;padding:.8rem 2rem;background:var(--accent);color:#0d1117;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-de">Kaufen · PayPal</a>
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=39.90&item_name=Fernblick+Calendar+2027+all+4+styles+A3" target="_blank" style="display:inline-block;padding:.8rem 2rem;background:var(--accent);color:#0d1117;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;border-radius:3px;text-decoration:none;font-weight:500;" class="lang-en">Buy · PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hinweis -->
+    <div class="info-box">
+      <p class="lang-de" style="font-size:0.82rem;color:var(--text-muted);">
+        📅 <strong style="color:var(--text);">So funktioniert es:</strong> Nach dem Kauf per PayPal erhältst du den Download-Link für dein gewähltes PDF innerhalb von 24 Stunden per E-Mail. Die PDF-Datei lädst du dann bei CEWE, Pixum oder dm hoch — Wandkalender ab ca. 10–15 €.
+      </p>
+      <p class="lang-en" style="font-size:0.82rem;color:var(--text-muted);">
+        📅 <strong style="color:var(--text);">How it works:</strong> After PayPal payment you receive your download link within 24 hours by email. Upload the PDF to CEWE, Pixum or any print service — wall calendars from approx. €10–15.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── ÜBER MICH ─── -->
+<div id="ueber" class="section-wrap">
+  <span class="section-label lang-de">Über mich</span>
+  <span class="section-label lang-en">About Me</span>
+  <div class="about-grid">
+    <img class="about-img" src="IMG-20241023-WA0007.jpg" alt="Tobias – Fotograf" loading="lazy"/>
+    <div class="about-text">
+      <h2 class="lang-de">Hinter der Linse</h2>
+      <h2 class="lang-en">Behind the Lens</h2>
+      <p class="lang-de">
+        Hallo, ich bin Tobias – Ingenieur, Familienvater und leidenschaftlicher Naturfotograf. Die Natur ist mein Ausgleich, die Kamera mein Werkzeug. Was ich festhalte, sind keine Fotos – es sind Momente, in denen die Welt für einen Augenblick den Atem anhält.
+      </p>
+      <p class="lang-en">
+        Hi, I'm Tobias – an engineer, father, and passionate nature photographer. Nature is my balance, the camera my tool. What I capture aren't just photographs – they are moments when the world holds its breath for an instant.
+      </p>
+      <p class="lang-de">
+        Meine Reisen führen mich durch Bergwälder, an raue Küsten und in stille Täler. Jedes Bild entsteht mit dem Respekt vor dem Augenblick – und der Geduld, auf ihn zu warten.
+      </p>
+      <p class="lang-en">
+        My journeys take me through mountain forests, along rugged coastlines, and into quiet valleys. Every image is created with respect for the moment – and the patience to wait for it.
+      </p>
+      <a href="mailto:DEINE-EMAIL@example.com" class="btn-outline lang-de" style="margin-top:1.5rem; display:inline-block;">Kontakt aufnehmen</a>
+      <a href="mailto:DEINE-EMAIL@example.com" class="btn-outline lang-en" style="margin-top:1.5rem; display:inline-block;">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── PHOTO MODAL ─── -->
+<div class="modal-overlay" id="modal" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3 id="modal-title">Foto</h3>
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;" class="lang-de">Lizenz auswählen, dann mit PayPal kaufen:</p>
+    <p style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0;" class="lang-en">Select license, then purchase via PayPal:</p>
+    <img id="modal-img" class="modal-photo" src="" alt=""/>
+    <div class="modal-licenses">
+      <button class="lic-btn" onclick="selectLicense(this,'','9.90')">
+        <div class="lic-name lang-de">Privat</div>
+        <div class="lic-name lang-en">Personal</div>
+        <div class="lic-price">€ 9,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'','19.90')">
+        <div class="lic-name">Blog / Social</div>
+        <div class="lic-price">€ 19,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'','49.90')">
+        <div class="lic-name lang-de">Kommerziell</div>
+        <div class="lic-name lang-en">Commercial</div>
+        <div class="lic-price">€ 49,90</div>
+      </button>
+      <button class="lic-btn" onclick="selectLicense(this,'','99.90')">
+        <div class="lic-name">Extended</div>
+        <div class="lic-price">€ 99,90</div>
+      </button>
+    </div>
+    <p class="checkout-notice lang-de">
+      ✓ Mit dem Kauf bestätige ich, dass ich auf mein Widerrufsrecht verzichte, sobald der Download bereitgestellt wird, und stimme den <a href="agb.html">AGB</a> zu.
+    </p>
+    <p class="checkout-notice lang-en">
+      ✓ By purchasing I confirm that I waive my right of withdrawal once the download is made available, and agree to the <a href="agb.html">Terms & Conditions</a>.
+    </p>
+    <a id="paypal-checkout-btn" href="#" target="_blank" class="paypal-btn lang-de" style="pointer-events:none; opacity:0.4;">Lizenz wählen → PayPal</a>
+    <a id="paypal-checkout-btn-en" href="#" target="_blank" class="paypal-btn lang-en" style="pointer-events:none; opacity:0.4;">Select license → PayPal</a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-logo">Fern<span>blick</span></div>
+  <div class="footer-tagline lang-de">Naturfotografie · Fine Art Prints · by Tobias</div>
+  <div class="footer-tagline lang-en">Nature Photography · Fine Art Prints · by Tobias</div>
+  <div class="footer-links">
+    <a href="#galerie" class="lang-de">Galerie</a>
+    <a href="#galerie" class="lang-en">Gallery</a>
+    <a href="#kalender" class="lang-de">Kalender</a>
+    <a href="#kalender" class="lang-en">Calendar</a>
+    <a href="#preise" class="lang-de">Preise</a>
+    <a href="#preise" class="lang-en">Pricing</a>
+    <a href="impressum.html" class="lang-de">Impressum</a>
+    <a href="impressum.html" class="lang-en">Legal Notice</a>
+    <a href="datenschutz.html" class="lang-de">Datenschutz</a>
+    <a href="datenschutz.html" class="lang-en">Privacy Policy</a>
+    <a href="agb.html" class="lang-de">AGB</a>
+    <a href="agb.html" class="lang-en">Terms & Conditions</a>
+    <a href="widerruf.html" class="lang-de">Widerruf</a>
+    <a href="widerruf.html" class="lang-en">Right of Withdrawal</a>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Tobias – Fernblick Naturfotografie. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function setLang(lang) {
+    if (lang === 'en') {
+      document.body.classList.add('lang-en');
+      document.getElementById('btn-en').classList.add('active');
+      document.getElementById('btn-de').classList.remove('active');
+      document.documentElement.lang = 'en';
+    } else {
+      document.body.classList.remove('lang-en');
+      document.getElementById('btn-de').classList.add('active');
+      document.getElementById('btn-en').classList.remove('active');
+      document.documentElement.lang = 'de';
+    }
+    localStorage.setItem('lang', lang);
+  }
+
+  // Restore language
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) setLang(savedLang);
+
+  // Modal
+  let selectedPaypalUrl = '';
+
+  function openModal(title, imgSrc) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-img').src = imgSrc;
+    document.getElementById('modal').classList.add('open');
+    document.querySelectorAll('.lic-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('paypal-checkout-btn').style.opacity = '0.4';
+    document.getElementById('paypal-checkout-btn').style.pointerEvents = 'none';
+    document.getElementById('paypal-checkout-btn-en').style.opacity = '0.4';
+    document.getElementById('paypal-checkout-btn-en').style.pointerEvents = 'none';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+
+  function closeModalOnBg(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  function selectLicense(btn, paypalName, amount) {
+    document.querySelectorAll('.lic-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    const url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=' + amount + '&item_name=Fernblick+Foto+Lizenz';
+    document.getElementById('paypal-checkout-btn').href = url;
+    document.getElementById('paypal-checkout-btn').style.opacity = '1';
+    document.getElementById('paypal-checkout-btn').style.pointerEvents = 'auto';
+    document.getElementById('paypal-checkout-btn-en').href = url;
+    document.getElementById('paypal-checkout-btn-en').style.opacity = '1';
+    document.getElementById('paypal-checkout-btn-en').style.pointerEvents = 'auto';
+  }
+
+
+  // ─── ALL 64 PHOTOS ───
+    const allPhotos = [
+    {file:'DSC00450 - 1.jpg', title:'Venedig abseits'},
+    {file:'DSC04045.jpg', title:'Almhütte bei Nacht'},
+    {file:'DSC04048.jpg', title:'Nachtlicht'},
+    {file:'DSC04456.jpg', title:'Sonnenuntergang Bergwelten im Winter'},
+    {file:'DSC04540.jpg', title:'Nebelschwaden im Sonnenaufgang'},
+    {file:'DSC04541.jpg', title:'Nebelschwaden im Bergparadies'},
+    {file:'DSC04602.jpg', title:'Sonnenaufgang Almhütte am Morgen'},
+    {file:'IMG_1107.JPG', title:'Honigbiene im Lavendel'},
+    {file:'IMG_1329.JPG', title:'Bergbach im Stillstand'},
+    {file:'IMG_1826.JPG', title:'Raubfliege'},
+    {file:'IMG_1833.JPG', title:'Harlekin Marienkäfer'},
+    {file:'IMG_1835.JPG', title:'Honigbiene trinkt'},
+    {file:'IMG_20250417_132550_423.jpg', title:'Ammenhai'},
+    {file:'IMG_2026.JPG', title:'Silbermöwen im Flug'},
+    {file:'IMG_2116.JPG', title:'Longhorn mit Kalb'},
+    {file:'IMG_2225.JPG', title:'Leuchtturm im Morgenlicht'},
+    {file:'IMG_2229.JPG', title:'Helgoland Düne im Sonnenaufgang'},
+    {file:'IMG_2256.JPG', title:'Leuchtturm Helgoland Düne'},
+    {file:'IMG_2262.JPG', title:'Sonnenaufgang an der See'},
+    {file:'IMG_2309.JPG', title:'Baby Kegelrobbe'},
+    {file:'IMG_2316.JPG', title:'Junge Kegelrobbe'},
+    {file:'IMG_2323.JPG', title:'Die Zeit steht still'},
+    {file:'IMG_2324 (4).jpg', title:'Sonnenuntergang am Leuchtturm'},
+    {file:'IMG_2365.JPG', title:'Helgoland Düne'},
+    {file:'IMG_2374.JPG', title:'Helgoland'},
+    {file:'IMG_2391.JPG', title:'Kegelrobbe in Brandung'},
+    {file:'IMG_2395.JPG', title:'Kegelrobben'},
+    {file:'IMG_2398.JPG', title:'Stare im Schwarm'},
+    {file:'IMG_2399.JPG', title:'Stare im Flug'},
+    {file:'IMG_2445.JPG', title:'Mystischer Leuchtturm'},
+    {file:'IMG_2684.JPG', title:'Waterbungalows Maledives'},
+    {file:'IMG_2686.JPG', title:'Palmen im Sonnenschein'},
+    {file:'IMG_2688.JPG', title:'Sonnenbrille'},
+    {file:'IMG_2690.JPG', title:'Palmeninsel im Sonnenuntergang'},
+    {file:'IMG_2694.JPG', title:'Malediven goldene Stunde'},
+    {file:'IMG_2702.JPG', title:'Malediven goldene Stunde II'},
+    {file:'IMG_2721.JPG', title:'Palme im Sonnenlicht'},
+    {file:'IMG_2729.JPG', title:'Goldene Stunde am Strand'},
+    {file:'IMG_2747(1)(1).jpg', title:'Sonnensittich'},
+    {file:'IMG_2748.JPG', title:'Sonnensittich am Strand'},
+    {file:'IMG_2767.JPG', title:'Malediven'},
+    {file:'IMG_2771.JPG', title:'Goldenhour Maledives'},
+    {file:'IMG_2772.JPG', title:'Einsiedlerkrebs in der Goldenen Stunde'},
+    {file:'IMG_2773.JPG', title:'Einsiedlerkrebs in der Goldenen Stunde'},
+    {file:'IMG_2776.JPG', title:'Palmen im Farbenrausch'},
+    {file:'IMG_2800.JPG', title:'Traumorte'},
+    {file:'IMG_2820.JPG', title:'Palme'},
+    {file:'IMG_2826.JPG', title:'Strandauszeit'},
+    {file:'IMG_2834.JPG', title:'Goldenes Licht am Meer'},
+    {file:'leuchtturm-duenen.jpg', title:'Leuchtturm in den Dünen'},
+    {file:'meeresschaum-abendlicht.jpg', title:'Meeresschaum im Abendlicht'},
+    {file:'nordsee-gegenlicht.jpg', title:'Nordsee im Gegenlicht'},
+    {file:'duenenweg-ans-meer.jpg', title:'Dünenweg ans Meer'},
+    {file:'strandhafer-wind.jpg', title:'Strandhafer im Wind'},
+    {file:'durch-die-duenen.jpg', title:'Durch die Dünen'},
+    {file:'moewen-watt.jpg', title:'Möwen über dem Watt'},
+    {file:'strandlaeufer-watt.jpg', title:'Strandläufer im Watt'},
+    {file:'wolkenspiegelung-watt.jpg', title:'Wolkenspiegelung im Watt'},
+    {file:'goldene-stunde-wattenmeer.jpg', title:'Goldene Stunde im Wattenmeer'},
+    {file:'herzmuscheln-strand.jpg', title:'Herzmuscheln am Strand'},
+    {file:'silbermoewe-abendlicht.jpg', title:'Silbermöwe im Abendlicht'},
+    {file:'seehund-watt.jpg', title:'Seehund im Watt'},
+    {file:'kindheit-am-meer.jpg', title:'Kindheit am Meer'},
+  ];
+
+  const PER_PAGE = 12;
+  let loaded = 0;
+
+  function createCard(photo) {
+    const card = document.createElement('div');
+    card.className = 'photo-card';
+    card.onclick = () => openModal(photo.title, photo.file);
+    card.innerHTML = '<img src="' + photo.file + '" alt="' + photo.title + '" loading="lazy"/>' +
+      '<div class="photo-overlay">' +
+      '<div class="photo-title">' + photo.title + '</div>' +
+      '<div class="photo-buy lang-de">ab 9,90 € · Kaufen</div>' +
+      '<div class="photo-buy lang-en">from €9.90 · Buy</div>' +
+      '</div>';
+    return card;
+  }
+
+  function updateCount() {
+    const shown = Math.min(loaded, allPhotos.length);
+    document.getElementById('photo-count').textContent = shown + ' / ' + allPhotos.length + ' Fotos';
+    const btn = document.getElementById('load-more-btn');
+    if (loaded >= allPhotos.length) btn.style.display = 'none';
+  }
+
+  function loadMore() {
+    const grid = document.getElementById('gallery-grid');
+    const end = Math.min(loaded + PER_PAGE, allPhotos.length);
+    for (let i = loaded; i < end; i++) {
+      grid.appendChild(createCard(allPhotos[i]));
+    }
+    loaded = end;
+    updateCount();
+  }
+
+  loadMore();
+
+
+
+  // Kalender Slider
+  function showSlide(stilNr, idx) {
+    var slider = document.getElementById('slider-' + stilNr);
+    slider.style.transform = idx === 0 ? 'translateX(0)' : 'translateX(-50%)';
+    for (var i = 0; i < 2; i++) {
+      var dot = document.getElementById('dot-' + stilNr + '-' + i);
+      var tab = document.getElementById('tab-' + stilNr + '-' + i);
+      if (dot) dot.style.opacity = i === idx ? '1' : '0.35';
+      if (tab) { tab.style.color = i === idx ? 'var(--accent)' : 'var(--text-muted)'; tab.style.borderBottom = i === idx ? '2px solid var(--accent)' : 'none'; }
+    }
+  }
+
+  // Kalender-Style Selector
+  function updateKalBtn(format, stil) {
+    const stilNr = stil.replace('stil','');
+    const baseUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR';
+    if (format === 'a4') {
+      const price = '9.90';
+      document.getElementById('btn-kal-a4-de').href = baseUrl + '&amount=' + price + '&item_name=Fernblick+Kalender+2027+A4+' + stil;
+      document.getElementById('btn-kal-a4-en').href = baseUrl + '&amount=' + price + '&item_name=Fernblick+Calendar+2027+A4+Style' + stilNr;
+    } else {
+      const price = '12.90';
+      document.getElementById('btn-kal-a3-de').href = baseUrl + '&amount=' + price + '&item_name=Fernblick+Kalender+2027+A3+' + stil;
+      document.getElementById('btn-kal-a3-en').href = baseUrl + '&amount=' + price + '&item_name=Fernblick+Calendar+2027+A3+Style' + stilNr;
+    }
+  }
+
+  // Smooth scroll for nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
