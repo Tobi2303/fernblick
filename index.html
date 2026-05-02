@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernblick – Landschaftsfotografie & Fotokalender 2027 | Naturfotografie Tobias Schmidt</title>
+  <meta name="description" content="Fotokalender 2027 & Fine Art Prints von Tobias Schmidt: Malediven, Thailand, Weltreise, Nordsee & mehr. Als PDF kaufen, bei CEWE drucken. Ab 9,90 €.">
+  <meta name="keywords" content="Fotokalender 2027, Landschaftsfotografie, Naturfotografie, Malediven Kalender, Thailand Kalender, Weltreise Kalender, Nordsee Fotografie, Fine Art Print, digitaler Download, Hvide Sande, Tobias Schmidt">
+  <meta name="author" content="Tobias Schmidt – Fernblick">
+  <meta property="og:title" content="Fernblick – Fotokalender 2027 & Fine Art Prints">
+  <meta property="og:description" content="Landschaftsfotografie als digitaler Fine-Art-Print & Fotokalender 2027. Malediven, Thailand, Weltreise und Nordsee-Motive. Ab 9,90 €.">
+  <meta property="og:image" content="https://www.fernblick.online/stil1-p00.jpg">
+  <meta property="og:url" content="https://www.fernblick.online">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://www.fernblick.online/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <style>
+    /* ── Reset & Basis ────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #0d0d1a;
+      --surface:  #1a1a2e;
+      --surface2: #12122a;
+      --accent:   #c9a84c;
+      --accent2:  #a8873a;
+      --text:     #f0ece3;
+      --muted:    #8888a8;
+      --border:   rgba(201,168,76,.25);
+      --radius:   14px;
+      --max:      1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ── Sprach-Ausblendung ───────────────────────────────── */
+    body.lang-de [lang="en"] { display: none; }
+    body.lang-en [lang="de"] { display: none; }
+
+    /* ── Navigation ──────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,13,26,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 1.25rem;
+    }
+    .nav-logo { font-size: 1.25rem; font-weight: 800; letter-spacing: .05em; color: var(--accent); }
+    .nav-links { display: flex; gap: 1.4rem; align-items: center; flex-wrap: wrap; }
+    .nav-links a { font-size: .85rem; color: var(--muted); transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .lang-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--accent); padding: .2rem .6rem; border-radius: 6px;
+      font-size: .78rem; font-weight: 700; cursor: pointer; transition: background .2s;
+    }
+    .lang-btn:hover { background: var(--accent); color: var(--surface2); }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 6rem 1.25rem 4rem;
+      background: linear-gradient(160deg, #0d0d1a 0%, #1a1a2e 60%, #0a0a18 100%);
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,.07) 0%, transparent 70%);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 680px; }
+    .hero-eyebrow { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .hero-title { font-size: clamp(2.8rem, 8vw, 5.5rem); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; color: var(--text); margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 2.2rem; line-height: 1.7; }
+    .hero-btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent); color: var(--surface2); font-weight: 700;
+      padding: .75rem 1.75rem; border-radius: 8px; font-size: .9rem;
+      transition: opacity .2s;
+    }
+    .btn-primary:hover { opacity: .85; }
+    .btn-ghost {
+      border: 1px solid var(--border); color: var(--text);
+      padding: .75rem 1.75rem; border-radius: 8px; font-size: .9rem;
+      transition: border-color .2s;
+    }
+    .btn-ghost:hover { border-color: var(--accent); }
+    .scroll-hint { margin-top: 3rem; font-size: .75rem; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+
+    /* ── Sektions-Header ─────────────────────────────────── */
+    .section-label {
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: .6rem;
+    }
+    .section-title { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: .8rem; }
+    .section-sub { color: var(--muted); max-width: 560px; }
+
+    /* ── Galerie ─────────────────────────────────────────── */
+    #galerie { padding: 5rem 0; }
+    .galerie-header { text-align: center; margin-bottom: 2.5rem; }
+    .galerie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .galerie-item {
+      border-radius: var(--radius); overflow: hidden; cursor: pointer;
+      aspect-ratio: 4/3; background: var(--surface);
+      position: relative;
+    }
+    .galerie-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .galerie-item:hover img { transform: scale(1.05); }
+    .galerie-item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.6) 0%, transparent 50%);
+      opacity: 0; transition: opacity .3s;
+      display: flex; align-items: flex-end; padding: 1rem;
+    }
+    .galerie-item:hover .galerie-item-overlay { opacity: 1; }
+    .galerie-item-overlay span { font-size: .8rem; color: #fff; }
+    .galerie-more { text-align: center; margin-top: 2rem; }
+
+    /* ── Preise ──────────────────────────────────────────── */
+    #preise { padding: 5rem 0; background: var(--surface2); }
+    .preise-header { text-align: center; margin-bottom: .6rem; }
+    .preise-sub { text-align: center; color: var(--muted); margin-bottom: 3rem; }
+    .preise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem; margin-bottom: 2rem;
+    }
+    .preis-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.6rem 1.3rem;
+      position: relative; transition: border-color .2s;
+    }
+    .preis-card:hover { border-color: var(--accent); }
+    .preis-card.featured { border-color: var(--accent); }
+    .preis-badge {
+      position: absolute; top: -1px; right: 1.2rem;
+      background: var(--accent); color: var(--surface2);
+      font-size: .65rem; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase; padding: .2rem .6rem; border-radius: 0 0 6px 6px;
+    }
+    .preis-name { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .4rem; }
+    .preis-amount { font-size: 2rem; font-weight: 900; color: var(--text); margin-bottom: .2rem; }
+    .preis-per { font-size: .78rem; color: var(--muted); margin-bottom: 1rem; }
+    .preis-desc { font-size: .83rem; color: var(--muted); margin-bottom: 1.1rem; line-height: 1.55; }
+    .preis-features { list-style: none; margin-bottom: 1.3rem; }
+    .preis-features li { font-size: .8rem; color: var(--muted); padding: .25rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .preis-features li::before { content: '✓  '; color: var(--accent); }
+    .preis-btn {
+      display: block; width: 100%; text-align: center;
+      background: var(--accent); color: var(--surface2);
+      font-weight: 700; font-size: .82rem; padding: .6rem;
+      border-radius: 8px; transition: opacity .2s;
+    }
+    .preis-btn:hover { opacity: .85; }
+    .preis-hint { font-size: .75rem; color: var(--muted); text-align: center; max-width: 680px; margin: 1.5rem auto 0; line-height: 1.6; }
+
+    /* ── Kalender ────────────────────────────────────────── */
+    #kalender { padding: 5rem 0; }
+    .kalender-header { text-align: center; margin-bottom: .6rem; }
+    .kalender-sub { text-align: center; color: var(--muted); margin-bottom: 3rem; }
+    .kalender-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    /* ── Kalender-Karte (bestehend + neu) ────────────────── */
+    .cal-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,.45);
+      border: 1px solid var(--border);
+      transition: border-color .2s;
+    }
+    .cal-card:hover { border-color: var(--accent); }
+
+    /* Slider */
+    .cal-slider-wrap {
+      position: relative; width: 100%;
+      aspect-ratio: 210 / 297;
+      overflow: hidden; background: #000;
+    }
+    .cal-slides {
+      display: flex; height: 100%;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+    .cal-slides img {
+      flex: 0 0 100%; width: 100%; height: 100%;
+      object-fit: cover; object-position: top; display: block;
+    }
+    .cal-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,.55); color: #fff;
+      border: none; border-radius: 50%;
+      width: 2.6rem; height: 2.6rem;
+      font-size: 1.6rem; line-height: 1; cursor: pointer;
+      z-index: 10; transition: background .2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cal-btn:hover { background: rgba(201,168,76,.85); }
+    .cal-prev { left: .6rem; }
+    .cal-next { right: .6rem; }
+    .cal-dots {
+      position: absolute; bottom: .5rem; left: 50%; transform: translateX(-50%);
+      display: flex; gap: .35rem; flex-wrap: wrap;
+      justify-content: center; max-width: 90%;
+    }
+    .cal-dot {
+      width: .45rem; height: .45rem; border-radius: 50%;
+      background: rgba(255,255,255,.4); cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .cal-dot.active { background: var(--accent); transform: scale(1.4); }
+
+    /* Tabs */
+    .cal-tabs {
+      display: flex; flex-wrap: nowrap; overflow-x: auto;
+      gap: .3rem; padding: .5rem .7rem;
+      background: var(--surface2); scrollbar-width: none;
+    }
+    .cal-tabs::-webkit-scrollbar { display: none; }
+    .cal-tab {
+      flex: 0 0 auto; padding: .25rem .55rem;
+      border-radius: 6px; border: 1px solid var(--border);
+      background: transparent; color: var(--accent);
+      font-size: .72rem; cursor: pointer;
+      transition: background .2s, color .2s; white-space: nowrap;
+    }
+    .cal-tab:hover, .cal-tab.active {
+      background: var(--accent); color: var(--surface2); font-weight: 700;
+    }
+
+    /* Info */
+    .cal-info { padding: 1.1rem 1.3rem 1.4rem; }
+    .cal-badge {
+      display: inline-block; background: var(--accent);
+      color: var(--surface2); font-size: .65rem; font-weight: 800;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .15rem .5rem; border-radius: 4px; margin-bottom: .5rem;
+    }
+    .cal-badge.new-badge { background: #3ab57a; }
+    .cal-info h3 {
+      font-size: 1.05rem; font-weight: 700; color: var(--text);
+      margin: .2rem 0 .5rem; line-height: 1.3;
+    }
+    .cal-info p {
+      font-size: .85rem; color: var(--muted);
+      margin-bottom: .9rem; line-height: 1.55;
+    }
+    .cal-buy-row {
+      display: flex; align-items: center;
+      gap: .7rem; margin-bottom: .45rem; flex-wrap: wrap;
+    }
+    .cal-buy-row span { font-size: .85rem; color: var(--text); min-width: 7rem; }
+    .cal-buy-btn {
+      padding: .3rem .85rem; border-radius: 6px;
+      background: var(--accent); color: var(--surface2);
+      font-size: .78rem; font-weight: 700; transition: opacity .2s;
+    }
+    .cal-buy-btn:hover { opacity: .82; }
+
+    /* Bundle */
+    .bundle-box {
+      background: var(--surface); border: 1px solid var(--accent);
+      border-radius: var(--radius); padding: 2rem;
+      text-align: center; margin-top: 3rem;
+    }
+    .bundle-box h3 { font-size: 1.4rem; margin-bottom: .5rem; }
+    .bundle-box p { color: var(--muted); margin-bottom: 1.5rem; font-size: .9rem; }
+    .bundle-prices { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .bundle-price-item { text-align: center; }
+    .bundle-amount { font-size: 1.8rem; font-weight: 900; color: var(--accent); }
+    .bundle-label { font-size: .78rem; color: var(--muted); }
+    .bundle-btns { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; margin-top: .8rem; }
+    .bundle-hint { font-size: .8rem; color: var(--muted); margin-top: 1.2rem; line-height: 1.65; }
+
+    /* ── SEO-Textblock ───────────────────────────────────── */
+    #seo-text { padding: 4rem 0; background: var(--surface2); }
+    #seo-text h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: .6rem; }
+    #seo-text p { color: var(--muted); font-size: .9rem; line-height: 1.75; margin-bottom: 1.5rem; }
+    .seo-keywords { font-size: .8rem; color: var(--muted); line-height: 1.8; }
+    .seo-keywords strong { color: var(--text); }
+
+    /* ── Über mich ───────────────────────────────────────── */
+    #ueber { padding: 5rem 0; }
+    .ueber-inner {
+      display: grid; grid-template-columns: 1fr 1.6fr;
+      gap: 3rem; align-items: center;
+    }
+    .ueber-img {
+      border-radius: var(--radius); overflow: hidden;
+      aspect-ratio: 1; background: var(--surface);
+    }
+    .ueber-img img { width: 100%; height: 100%; object-fit: cover; }
+    .ueber-text h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; }
+    .ueber-text p { color: var(--muted); font-size: .92rem; margin-bottom: 1rem; line-height: 1.75; }
+    .ueber-contact {
+      display: inline-block; margin-top: .5rem;
+      background: var(--accent); color: var(--surface2);
+      font-weight: 700; padding: .65rem 1.4rem; border-radius: 8px; font-size: .85rem;
+    }
+
+    /* ── Modal ───────────────────────────────────────────── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,.75); align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 2rem;
+      max-width: 440px; width: 90%; position: relative;
+    }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1rem;
+      background: none; border: none; color: var(--muted);
+      font-size: 1.4rem; cursor: pointer;
+    }
+    .modal-img { width: 100%; border-radius: 8px; margin-bottom: 1rem; }
+    .modal-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+    .license-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-bottom: 1rem; }
+    .license-btn {
+      border: 1px solid var(--border); background: transparent;
+      color: var(--text); border-radius: 8px; padding: .6rem;
+      cursor: pointer; font-size: .8rem; text-align: center; transition: border-color .2s, background .2s;
+    }
+    .license-btn:hover, .license-btn.selected { border-color: var(--accent); background: rgba(201,168,76,.1); }
+    .modal-terms { font-size: .72rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.5; }
+    .modal-terms a { color: var(--accent); }
+    .modal-pay-btn {
+      display: block; width: 100%; text-align: center;
+      background: var(--accent); color: var(--surface2);
+      font-weight: 700; padding: .75rem; border-radius: 8px; font-size: .9rem;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer { background: var(--surface2); border-top: 1px solid var(--border); padding: 2.5rem 0; }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 1.25rem;
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      align-items: center; justify-content: space-between;
+    }
+    .footer-brand { font-weight: 800; color: var(--accent); font-size: 1.1rem; }
+    .footer-brand span { display: block; font-size: .75rem; color: var(--muted); font-weight: 400; margin-top: .2rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: .8rem 1.2rem; }
+    .footer-links a { font-size: .8rem; color: var(--muted); transition: color .2s; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: .75rem; color: var(--muted); }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .ueber-inner { grid-template-columns: 1fr; }
+      .ueber-img { max-width: 280px; margin: 0 auto; }
+      .nav-links a[lang] { display: none; }
+    }
+  </style>
+</head>
+
+<body class="lang-de">
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Fernblick</a>
+    <div class="nav-links">
+      <a href="#galerie" lang="de">Galerie</a>
+      <a href="#galerie" lang="en">Gallery</a>
+      <a href="#kalender" lang="de">Kalender</a>
+      <a href="#kalender" lang="en">Calendar</a>
+      <a href="#preise" lang="de">Preise</a>
+      <a href="#preise" lang="en">Pricing</a>
+      <a href="#ueber" lang="de">Über mich</a>
+      <a href="#ueber" lang="en">About</a>
+      <button class="lang-btn" id="langToggle">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Naturfotografie · Fine Art Prints</p>
+    <h1 class="hero-title">Fernblick</h1>
+    <p class="hero-sub" lang="de">Landschaften, die atmen. Momente, die bleiben.<br>Digitale Fine-Art-Prints zum sofortigen Download.</p>
+    <p class="hero-sub" lang="en">Landscapes that breathe. Moments that last.<br>Digital fine-art prints available for instant download.</p>
+    <div class="hero-btns">
+      <a href="#galerie" class="btn-primary" lang="de">Galerie entdecken</a>
+      <a href="#galerie" class="btn-primary" lang="en">Explore Gallery</a>
+      <a href="#preise" class="btn-ghost" lang="de">Preise &amp; Lizenzen</a>
+      <a href="#preise" class="btn-ghost" lang="en">Pricing &amp; Licenses</a>
+    </div>
+    <p class="scroll-hint">Scroll</p>
+  </div>
+</section>
+
+<!-- ── Galerie ──────────────────────────────────────────────── -->
+<section id="galerie">
+  <div class="container">
+    <div class="galerie-header">
+      <p class="section-label" lang="de">Galerie</p>
+      <p class="section-label" lang="en">Gallery</p>
+      <h2 class="section-title" lang="de">Ausgewählte Aufnahmen</h2>
+      <h2 class="section-title" lang="en">Selected Works</h2>
+    </div>
+    <div class="galerie-grid" id="galerieGrid">
+      <!-- Galerie-Bilder werden per JS geladen (wie bisher) -->
+    </div>
+    <div class="galerie-more">
+      <button class="btn-ghost" id="btnMehr" lang="de">Mehr anzeigen</button>
+      <button class="btn-ghost" id="btnMore" lang="en">Load more</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── Preise ───────────────────────────────────────────────── -->
+<section id="preise">
+  <div class="container">
+    <div class="preise-header">
+      <p class="section-label" lang="de">Preise &amp; Lizenzen</p>
+      <p class="section-label" lang="en">Pricing &amp; Licenses</p>
+      <h2 class="section-title" lang="de">Jedes Bild. Deine Nutzung.</h2>
+      <h2 class="section-title" lang="en">Every image. Your use.</h2>
+    </div>
+    <p class="preise-sub" lang="de">Alle Fotos sind als hochauflösender digitaler Download erhältlich. Preise gelten pro Bild.</p>
+    <p class="preise-sub" lang="en">All photos available as high-resolution digital download. Prices per image.</p>
+
+    <div class="preise-grid">
+      <!-- Privat -->
+      <div class="preis-card">
+        <p class="preis-name" lang="de">Privat</p>
+        <p class="preis-name" lang="en">Personal</p>
+        <p class="preis-amount">€9,90</p>
+        <p class="preis-per" lang="de">pro Bild · einmalig</p>
+        <p class="preis-per" lang="en">per image · one-time</p>
+        <p class="preis-desc" lang="de">Für den privaten Eigengebrauch. Foto ausdrucken und zuhause aufhängen.</p>
+        <p class="preis-desc" lang="en">For private personal use. Print and display at home.</p>
+        <ul class="preis-features" lang="de"><li>Privater Druck (bis A2)</li><li>Keine kommerzielle Nutzung</li><li>JPG in hoher Auflösung</li><li>Sofortiger Download</li></ul>
+        <ul class="preis-features" lang="en"><li>Private print (up to A2)</li><li>No commercial use</li><li>High-resolution JPG</li><li>Instant download</li></ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Privat+Lizenz" class="preis-btn" lang="de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=9.90&currency_code=EUR&item_name=Fernblick+Foto+Personal+License" class="preis-btn" lang="en">Buy · PayPal</a>
+      </div>
+      <!-- Blog/Social -->
+      <div class="preis-card featured">
+        <span class="preis-badge" lang="de">Beliebt</span>
+        <span class="preis-badge" lang="en">Popular</span>
+        <p class="preis-name">Blog / Social</p>
+        <p class="preis-amount">€19,90</p>
+        <p class="preis-per" lang="de">pro Bild · einmalig</p>
+        <p class="preis-per" lang="en">per image · one-time</p>
+        <p class="preis-desc" lang="de">Für Blogs, private Websites und Social Media.</p>
+        <p class="preis-desc" lang="en">For blogs, personal websites and social media.</p>
+        <ul class="preis-features" lang="de"><li>Blog, Social Media, Website</li><li>Nicht-kommerzieller Inhalt</li><li>JPG in voller Auflösung</li><li>Sofortiger Download</li></ul>
+        <ul class="preis-features" lang="en"><li>Blog, social media, website</li><li>Non-commercial content</li><li>Full-resolution JPG</li><li>Instant download</li></ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+Lizenz" class="preis-btn" lang="de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=19.90&currency_code=EUR&item_name=Fernblick+Foto+Blog+Social+License" class="preis-btn" lang="en">Buy · PayPal</a>
+      </div>
+      <!-- Kommerziell -->
+      <div class="preis-card">
+        <p class="preis-name" lang="de">Kommerziell</p>
+        <p class="preis-name" lang="en">Commercial</p>
+        <p class="preis-amount">€49,90</p>
+        <p class="preis-per" lang="de">pro Bild · einmalig</p>
+        <p class="preis-per" lang="en">per image · one-time</p>
+        <p class="preis-desc" lang="de">Für gewerbliche Nutzung — Werbung, Broschüren, kommerzielle Websites. Bis 10.000 Exemplare.</p>
+        <p class="preis-desc" lang="en">For commercial use — advertising, brochures, commercial websites. Up to 10,000 copies.</p>
+        <ul class="preis-features" lang="de"><li>Werbung, Produkte, Druck</li><li>Bis 10.000 Exemplare</li><li>JPG in voller Auflösung</li><li>Digitale Lizenzurkunde</li></ul>
+        <ul class="preis-features" lang="en"><li>Ads, products, print runs</li><li>Up to 10,000 copies</li><li>Full-resolution JPG</li><li>Digital license certificate</li></ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Kommerziell+Lizenz" class="preis-btn" lang="de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=49.90&currency_code=EUR&item_name=Fernblick+Foto+Commercial+License" class="preis-btn" lang="en">Buy · PayPal</a>
+      </div>
+      <!-- Extended -->
+      <div class="preis-card">
+        <p class="preis-name">Extended</p>
+        <p class="preis-amount">€99,90</p>
+        <p class="preis-per" lang="de">pro Bild · einmalig</p>
+        <p class="preis-per" lang="en">per image · one-time</p>
+        <p class="preis-desc" lang="de">Unbegrenzte Nutzung in allen Medien — TV, Film, Außenwerbung, unbegrenzte Druckmengen.</p>
+        <p class="preis-desc" lang="en">Unlimited use across all media — TV, film, outdoor advertising, unlimited print runs.</p>
+        <ul class="preis-features" lang="de"><li>Unbegrenzte Nutzung</li><li>Alle Medien &amp; Druckmengen</li><li>JPG + TIFF in Rohauflösung</li><li>Digitale Lizenzurkunde</li></ul>
+        <ul class="preis-features" lang="en"><li>Unlimited usage</li><li>All media &amp; print runs</li><li>JPG + TIFF raw resolution</li><li>Digital license certificate</li></ul>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+Lizenz" class="preis-btn" lang="de">Kaufen · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&amount=99.90&currency_code=EUR&item_name=Fernblick+Foto+Extended+License" class="preis-btn" lang="en">Buy · PayPal</a>
+      </div>
+    </div>
+
+    <p class="preis-hint" lang="de">ⓘ Mit dem Kauf eines digitalen Downloads bestätigst du, dass du auf dein Widerrufsrecht verzichtest, sobald der Download bereitgestellt wird (§ 356 Abs. 5 BGB). Alle Preise inkl. MwSt. (Kleinunternehmer gem. § 19 UStG). Zahlung via PayPal. Nach Zahlungseingang erhältst du den Downloadlink per E-Mail.</p>
+    <p class="preis-hint" lang="en">ⓘ By purchasing a digital download, you agree to waive your right of withdrawal once the download is made available. All prices include VAT (small business exemption). Payment via PayPal. After payment confirmation you will receive the download link by email.</p>
+  </div>
+</section>
+
+<!-- ── Kalender ──────────────────────────────────────────────── -->
+<section id="kalender">
+  <div class="container">
+    <div class="kalender-header">
+      <p class="section-label" lang="de">Kalender 2027</p>
+      <p class="section-label" lang="en">Calendar 2027</p>
+      <h2 class="section-title" lang="de">Deine Lieblingsmomente. Das ganze Jahr.</h2>
+      <h2 class="section-title" lang="en">Your favourite moments. All year long.</h2>
+    </div>
+    <p class="kalender-sub" lang="de">7 exklusive Designs, je in A3 und A4. Als PDF herunterladen und bei CEWE, Pixum oder dm drucken lassen.</p>
+    <p class="kalender-sub" lang="en">7 exclusive designs, each in A3 and A4. Download as PDF and print at CEWE, Pixum or any print service.</p>
+
+    <div class="kalender-grid">
+
+      <!-- ═══ KALENDER 1: MALEDIVEN (NEU) ═══ -->
+      <div class="cal-card" data-slider="malediven">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="malediven-p00.jpg" alt="Malediven Fotokalender 2027 Cover" loading="lazy">
+            <img src="malediven-p01.jpg" alt="Malediven Kalender Januar 2027" loading="lazy">
+            <img src="malediven-p02.jpg" alt="Malediven Kalender Februar 2027" loading="lazy">
+            <img src="malediven-p03.jpg" alt="Malediven Kalender März 2027" loading="lazy">
+            <img src="malediven-p04.jpg" alt="Malediven Kalender April 2027" loading="lazy">
+            <img src="malediven-p05.jpg" alt="Malediven Kalender Mai 2027" loading="lazy">
+            <img src="malediven-p06.jpg" alt="Malediven Kalender Juni 2027" loading="lazy">
+            <img src="malediven-p07.jpg" alt="Malediven Kalender Juli 2027" loading="lazy">
+            <img src="malediven-p08.jpg" alt="Malediven Kalender August 2027" loading="lazy">
+            <img src="malediven-p09.jpg" alt="Malediven Kalender September 2027" loading="lazy">
+            <img src="malediven-p10.jpg" alt="Malediven Kalender Oktober 2027" loading="lazy">
+            <img src="malediven-p11.jpg" alt="Malediven Kalender November 2027" loading="lazy">
+            <img src="malediven-p12.jpg" alt="Malediven Kalender Dezember 2027" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge new-badge" lang="de">Neu</span>
+          <span class="cal-badge new-badge" lang="en">New</span>
+          <h3 lang="de">🏝️ Malediven – Paradiese im Indischen Ozean</h3>
+          <h3 lang="en">🏝️ Maldives – Paradise in the Indian Ocean</h3>
+          <p lang="de">Türkisblaues Wasser, weiße Sandstrände und Wasserbungalows im goldenen Abendlicht. 13 unvergessliche Aufnahmen aus dem Paradies.</p>
+          <p lang="en">Turquoise waters, white sandy beaches and overwater bungalows in golden evening light. 13 unforgettable shots from paradise.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+Malediven+A4" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+Maldives+A4" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+Malediven+A3" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+Maldives+A3" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 2: THAILAND (NEU) ═══ -->
+      <div class="cal-card" data-slider="thailand">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="thailand-p00.jpg" alt="Thailand Fotokalender 2027 Cover" loading="lazy">
+            <img src="thailand-p01.jpg" alt="Thailand Kalender Januar 2027" loading="lazy">
+            <img src="thailand-p02.jpg" alt="Thailand Kalender Februar 2027" loading="lazy">
+            <img src="thailand-p03.jpg" alt="Thailand Kalender März 2027" loading="lazy">
+            <img src="thailand-p04.jpg" alt="Thailand Kalender April 2027" loading="lazy">
+            <img src="thailand-p05.jpg" alt="Thailand Kalender Mai 2027" loading="lazy">
+            <img src="thailand-p06.jpg" alt="Thailand Kalender Juni 2027" loading="lazy">
+            <img src="thailand-p07.jpg" alt="Thailand Kalender Juli 2027" loading="lazy">
+            <img src="thailand-p08.jpg" alt="Thailand Kalender August 2027" loading="lazy">
+            <img src="thailand-p09.jpg" alt="Thailand Kalender September 2027" loading="lazy">
+            <img src="thailand-p10.jpg" alt="Thailand Kalender Oktober 2027" loading="lazy">
+            <img src="thailand-p11.jpg" alt="Thailand Kalender November 2027" loading="lazy">
+            <img src="thailand-p12.jpg" alt="Thailand Kalender Dezember 2027" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge new-badge" lang="de">Neu</span>
+          <span class="cal-badge new-badge" lang="en">New</span>
+          <h3 lang="de">🇹🇭 Thailand – Das Lächeln des Ostens</h3>
+          <h3 lang="en">🇹🇭 Thailand – The Smile of the East</h3>
+          <p lang="de">Phukets bunte Altstadtstraßen, wilde Küsten, tropische Märkte und farbenpräc­htige Makro-Blüten.</p>
+          <p lang="en">Phuket's colourful old town, wild coastlines, tropical markets and vivid macro flowers.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+Thailand+A4" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+Thailand+A4" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+Thailand+A3" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+Thailand+A3" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 3: WELTREISE (NEU) ═══ -->
+      <div class="cal-card" data-slider="weltreise">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="weltreise-p00.jpg" alt="Weltreise Fotokalender 2027 Cover" loading="lazy">
+            <img src="weltreise-p01.jpg" alt="Weltreise Kalender Januar 2027" loading="lazy">
+            <img src="weltreise-p02.jpg" alt="Weltreise Kalender Februar 2027" loading="lazy">
+            <img src="weltreise-p03.jpg" alt="Weltreise Kalender März 2027" loading="lazy">
+            <img src="weltreise-p04.jpg" alt="Weltreise Kalender April 2027" loading="lazy">
+            <img src="weltreise-p05.jpg" alt="Weltreise Kalender Mai 2027" loading="lazy">
+            <img src="weltreise-p06.jpg" alt="Weltreise Kalender Juni 2027" loading="lazy">
+            <img src="weltreise-p07.jpg" alt="Weltreise Kalender Juli 2027" loading="lazy">
+            <img src="weltreise-p08.jpg" alt="Weltreise Kalender August 2027" loading="lazy">
+            <img src="weltreise-p09.jpg" alt="Weltreise Kalender September 2027" loading="lazy">
+            <img src="weltreise-p10.jpg" alt="Weltreise Kalender Oktober 2027" loading="lazy">
+            <img src="weltreise-p11.jpg" alt="Weltreise Kalender November 2027" loading="lazy">
+            <img src="weltreise-p12.jpg" alt="Weltreise Kalender Dezember 2027" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge new-badge" lang="de">Neu</span>
+          <span class="cal-badge new-badge" lang="en">New</span>
+          <h3 lang="de">🌍 Weltreise – Vier Kontinente, ein Jahr</h3>
+          <h3 lang="en">🌍 World Tour – Four continents, one year</h3>
+          <p lang="de">Von der Ostsee über die Alpen, Mallorca und Portugal bis nach Thailand und auf die Malediven.</p>
+          <p lang="en">From the Baltic Sea across the Alps, Mallorca and Portugal all the way to Thailand and the Maldives.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+Weltreise+A4" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+World+Tour+A4" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+Weltreise+A3" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+World+Tour+A3" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 4: STIL 1 – Dunkel-Elegant (bestehend) ═══ -->
+      <div class="cal-card" data-slider="stil1">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="stil1-p00.jpg" alt="Fotokalender 2027 Dunkel-Elegant Cover" loading="lazy">
+            <img src="stil1-p01.jpg" alt="Januar 2027" loading="lazy"><img src="stil1-p02.jpg" alt="Februar" loading="lazy">
+            <img src="stil1-p03.jpg" alt="März" loading="lazy"><img src="stil1-p04.jpg" alt="April" loading="lazy">
+            <img src="stil1-p05.jpg" alt="Mai" loading="lazy"><img src="stil1-p06.jpg" alt="Juni" loading="lazy">
+            <img src="stil1-p07.jpg" alt="Juli" loading="lazy"><img src="stil1-p08.jpg" alt="August" loading="lazy">
+            <img src="stil1-p09.jpg" alt="September" loading="lazy"><img src="stil1-p10.jpg" alt="Oktober" loading="lazy">
+            <img src="stil1-p11.jpg" alt="November" loading="lazy"><img src="stil1-p12.jpg" alt="Dezember" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge">Stil 1</span>
+          <h3 lang="de">Dunkel-Elegant</h3><h3 lang="en">Dark-Elegant</h3>
+          <p lang="de">Dunkler Hintergrund, Foto links, Kalender rechts. Türkis-Akzente. Edel und modern.</p>
+          <p lang="en">Dark background, photo left, calendar right. Teal accents. Elegant and modern.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil1" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style1" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil1" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style1" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 5: STIL 2 – Hell-Minimalistisch ═══ -->
+      <div class="cal-card" data-slider="stil2">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="stil2-p00.jpg" alt="Fotokalender 2027 Hell-Minimalistisch Cover" loading="lazy">
+            <img src="stil2-p01.jpg" alt="Januar" loading="lazy"><img src="stil2-p02.jpg" alt="Februar" loading="lazy">
+            <img src="stil2-p03.jpg" alt="März" loading="lazy"><img src="stil2-p04.jpg" alt="April" loading="lazy">
+            <img src="stil2-p05.jpg" alt="Mai" loading="lazy"><img src="stil2-p06.jpg" alt="Juni" loading="lazy">
+            <img src="stil2-p07.jpg" alt="Juli" loading="lazy"><img src="stil2-p08.jpg" alt="August" loading="lazy">
+            <img src="stil2-p09.jpg" alt="September" loading="lazy"><img src="stil2-p10.jpg" alt="Oktober" loading="lazy">
+            <img src="stil2-p11.jpg" alt="November" loading="lazy"><img src="stil2-p12.jpg" alt="Dezember" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge">Stil 2</span>
+          <h3 lang="de">Hell-Minimalistisch</h3><h3 lang="en">Light-Minimal</h3>
+          <p lang="de">Weißer Hintergrund, Foto oben, Kalender unten. Rot-Akzente. Klar und zeitlos.</p>
+          <p lang="en">White background, photo top, calendar bottom. Red accents. Clean and timeless.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil2" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style2" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil2" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style2" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 6: STIL 3 – Bold-Magazin ═══ -->
+      <div class="cal-card" data-slider="stil3">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="stil3-p00.jpg" alt="Fotokalender 2027 Bold-Magazin Cover" loading="lazy">
+            <img src="stil3-p01.jpg" alt="Januar" loading="lazy"><img src="stil3-p02.jpg" alt="Februar" loading="lazy">
+            <img src="stil3-p03.jpg" alt="März" loading="lazy"><img src="stil3-p04.jpg" alt="April" loading="lazy">
+            <img src="stil3-p05.jpg" alt="Mai" loading="lazy"><img src="stil3-p06.jpg" alt="Juni" loading="lazy">
+            <img src="stil3-p07.jpg" alt="Juli" loading="lazy"><img src="stil3-p08.jpg" alt="August" loading="lazy">
+            <img src="stil3-p09.jpg" alt="September" loading="lazy"><img src="stil3-p10.jpg" alt="Oktober" loading="lazy">
+            <img src="stil3-p11.jpg" alt="November" loading="lazy"><img src="stil3-p12.jpg" alt="Dezember" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge">Stil 3</span>
+          <h3 lang="de">Bold-Magazin</h3><h3 lang="en">Bold-Magazine</h3>
+          <p lang="de">Große Monatsnummer, Foto rechts, Gold-Akzente. Dynamisch und modern.</p>
+          <p lang="en">Large month number, photo right, gold accents. Dynamic and bold.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil3" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style3" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil3" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style3" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ KALENDER 7: STIL 4 – Galerie-Rahmen ═══ -->
+      <div class="cal-card" data-slider="stil4">
+        <div class="cal-slider-wrap">
+          <div class="cal-slides">
+            <img src="stil4-p00.jpg" alt="Fotokalender 2027 Galerie-Rahmen Cover" loading="lazy">
+            <img src="stil4-p01.jpg" alt="Januar" loading="lazy"><img src="stil4-p02.jpg" alt="Februar" loading="lazy">
+            <img src="stil4-p03.jpg" alt="März" loading="lazy"><img src="stil4-p04.jpg" alt="April" loading="lazy">
+            <img src="stil4-p05.jpg" alt="Mai" loading="lazy"><img src="stil4-p06.jpg" alt="Juni" loading="lazy">
+            <img src="stil4-p07.jpg" alt="Juli" loading="lazy"><img src="stil4-p08.jpg" alt="August" loading="lazy">
+            <img src="stil4-p09.jpg" alt="September" loading="lazy"><img src="stil4-p10.jpg" alt="Oktober" loading="lazy">
+            <img src="stil4-p11.jpg" alt="November" loading="lazy"><img src="stil4-p12.jpg" alt="Dezember" loading="lazy">
+          </div>
+          <button class="cal-btn cal-prev">&#8249;</button>
+          <button class="cal-btn cal-next">&#8250;</button>
+          <div class="cal-dots"></div>
+        </div>
+        <div class="cal-tabs">
+          <button class="cal-tab active" data-idx="0">Cover</button>
+          <button class="cal-tab" data-idx="1">Jan</button><button class="cal-tab" data-idx="2">Feb</button>
+          <button class="cal-tab" data-idx="3">Mär</button><button class="cal-tab" data-idx="4">Apr</button>
+          <button class="cal-tab" data-idx="5">Mai</button><button class="cal-tab" data-idx="6">Jun</button>
+          <button class="cal-tab" data-idx="7">Jul</button><button class="cal-tab" data-idx="8">Aug</button>
+          <button class="cal-tab" data-idx="9">Sep</button><button class="cal-tab" data-idx="10">Okt</button>
+          <button class="cal-tab" data-idx="11">Nov</button><button class="cal-tab" data-idx="12">Dez</button>
+        </div>
+        <div class="cal-info">
+          <span class="cal-badge">Stil 4</span>
+          <h3 lang="de">Galerie-Rahmen</h3><h3 lang="en">Gallery-Frame</h3>
+          <p lang="de">Klassisches weißes Layout, Foto mit Rahmen. Elegant wie eine Kunstgalerie.</p>
+          <p lang="en">Classic white layout, framed photo. Elegant like an art gallery.</p>
+          <div class="cal-buy-row"><span>A4 &mdash; 9,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Kalender+2027+A4+Stil4" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=9.90&item_name=Fernblick+Calendar+2027+A4+Style4" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+          <div class="cal-buy-row"><span>A3 &mdash; 12,90 &euro;</span>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Kalender+2027+A3+Stil4" class="cal-buy-btn" lang="de">Kaufen · PayPal</a>
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=12.90&item_name=Fernblick+Calendar+2027+A3+Style4" class="cal-buy-btn" lang="en">Buy · PayPal</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /kalender-grid -->
+
+    <!-- Bundle -->
+    <div class="bundle-box">
+      <span class="cal-badge" lang="de">Spar-Bundle</span>
+      <span class="cal-badge" lang="en">Bundle Deal</span>
+      <h3 lang="de">Alle 7 Designs — ein Preis</h3>
+      <h3 lang="en">All 7 Designs — one price</h3>
+      <p lang="de">Alle 7 Kalender-PDFs in deinem Wunschformat. Du sparst über 50 % gegenüber dem Einzelkauf.</p>
+      <p lang="en">All 7 calendar PDFs in your chosen format. Save over 50% compared to individual purchase.</p>
+      <div class="bundle-prices">
+        <div class="bundle-price-item">
+          <div class="bundle-amount">€ 39,90</div>
+          <div class="bundle-label" lang="de">alle 7 Designs · A4</div>
+          <div class="bundle-label" lang="en">all 7 designs · A4</div>
+        </div>
+        <div class="bundle-price-item">
+          <div class="bundle-amount">€ 49,90</div>
+          <div class="bundle-label" lang="de">alle 7 Designs · A3</div>
+          <div class="bundle-label" lang="en">all 7 designs · A3</div>
+        </div>
+      </div>
+      <div class="bundle-btns">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=39.90&item_name=Fernblick+Kalender+2027+alle+7+Designs+A4" class="btn-primary" lang="de">A4 Bundle · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=39.90&item_name=Fernblick+Calendar+2027+all+7+designs+A4" class="btn-primary" lang="en">A4 Bundle · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=49.90&item_name=Fernblick+Kalender+2027+alle+7+Designs+A3" class="btn-primary" lang="de">A3 Bundle · PayPal</a>
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tobi.schmidt@outlook.com&currency_code=EUR&amount=49.90&item_name=Fernblick+Calendar+2027+all+7+designs+A3" class="btn-primary" lang="en">A3 Bundle · PayPal</a>
+      </div>
+      <p class="bundle-hint" lang="de">📅 <strong>So funktioniert es:</strong> Nach dem Kauf per PayPal erhältst du den Download-Link für dein gewähltes PDF innerhalb von 24 Stunden per E-Mail. Die PDF-Datei lädst du dann bei CEWE, Pixum oder dm hoch — Wandkalender ab ca. 10–15 €.</p>
+      <p class="bundle-hint" lang="en">📅 <strong>How it works:</strong> After PayPal payment you receive your download link within 24 hours by email. Upload the PDF to CEWE, Pixum or any print service — wall calendars from approx. €10–15.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SEO-Textblock ─────────────────────────────────────────── -->
+<section id="seo-text">
+  <div class="container">
+    <h2 lang="de">Landschaftsfotografie, die berührt</h2>
+    <h2 lang="en">Landscape Photography that moves you</h2>
+    <p lang="de">Fernblick steht für Naturfotografie, die mehr ist als ein Bild — es ist ein Gefühl. Tobias reist von den Alpen bis in die Tropen, wartet auf das letzte Licht und hält Momente fest, die sonst niemand sieht. Seine Landschaftsfotos aus der ganzen Welt sind als <strong>digitale Fine Art Prints</strong> erhältlich — sofort kaufen, herunterladen und professionell drucken lassen.</p>
+    <p lang="en">Fernblick stands for nature photography that is more than an image — it's a feeling. Tobias travels from the Alps to the tropics, waits for the last light, and captures moments no one else sees. His landscape photos from around the world are available as <strong>digital fine art prints</strong> — buy instantly, download and print professionally.</p>
+
+    <h2 lang="de">Fotokalender 2027 — Malediven, Thailand &amp; Weltreise</h2>
+    <h2 lang="en">Photo Calendar 2027 — Maldives, Thailand &amp; World Tour</h2>
+    <p lang="de">Der <strong>Fotokalender 2027</strong> von Fernblick ist mehr als ein Kalender — er ist eine Reise. Jetzt neu: Malediven, Thailand und Weltreise, dazu die vier klassischen Nordsee-Designs. Insgesamt 7 Kalender, je als <strong>A3 und A4 PDF zum Download</strong> — ideal zum Selbstdrucken oder als persönliches Geschenk.</p>
+    <p lang="en">The <strong>photo calendar 2027</strong> by Fernblick is more than a calendar — it's a journey. New: Maldives, Thailand and World Tour, plus the four classic North Sea designs. 7 calendars total, each as <strong>A3 and A4 PDF for download</strong> — perfect for self-printing or as a personal gift.</p>
+
+    <p class="seo-keywords" lang="de"><strong>Themen:</strong> Naturfotografie · Landschaftsfotografie · Malediven Fotografie · Thailand Fotografie · Weltreise Kalender · Nordsee Fotografie · Dänemark Fotografie · Hvide Sande · Fine Art Print kaufen · Fotokalender 2027 · Wandkalender Natur · Digitaler Download Foto</p>
+    <p class="seo-keywords" lang="en"><strong>Topics:</strong> Nature Photography · Landscape Photography · Maldives Photography · Thailand Photography · World Travel Calendar · North Sea Photography · Denmark · Fine Art Print · Photo Calendar 2027 · Wall Calendar · Digital Download</p>
+  </div>
+</section>
+
+<!-- ── Über mich ─────────────────────────────────────────────── -->
+<section id="ueber">
+  <div class="container">
+    <div class="ueber-inner">
+      <div class="ueber-img">
+        <img src="IMG-20241023-WA0007.jpg" alt="Tobias Schmidt – Naturfotograf Fernblick" loading="lazy">
+      </div>
+      <div class="ueber-text">
+        <p class="section-label" lang="de">Über Fernblick</p>
+        <p class="section-label" lang="en">About Fernblick</p>
+        <h2 lang="de">Hinter der Linse</h2>
+        <h2 lang="en">Behind the Lens</h2>
+        <p lang="de">Hallo, ich bin Tobias – Ingenieur, Familienvater und leidenschaftlicher Naturfotograf. Die Natur ist mein Ausgleich, die Kamera mein Werkzeug. Was ich festhalte, sind keine Fotos – es sind Momente, in denen die Welt für einen Augenblick den Atem anhält.</p>
+        <p lang="en">Hi, I'm Tobias – an engineer, father, and passionate nature photographer. Nature is my balance, the camera my tool. What I capture aren't just photographs – they are moments when the world holds its breath for an instant.</p>
+        <p lang="de">Meine Reisen führen mich durch Bergwälder, an raue Küsten und in stille Täler — von der Nordsee bis zu den Malediven. Jedes Bild entsteht mit dem Respekt vor dem Augenblick und der Geduld, auf ihn zu warten.</p>
+        <p lang="en">My journeys take me through mountain forests, along rugged coastlines and into quiet valleys — from the North Sea to the Maldives. Every image is created with respect for the moment and the patience to wait for it.</p>
+        <a href="mailto:tobi.schmidt@outlook.com" class="ueber-contact" lang="de">Kontakt aufnehmen</a>
+        <a href="mailto:tobi.schmidt@outlook.com" class="ueber-contact" lang="en">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      Fernblick
+      <span lang="de">Naturfotografie · Fine Art Prints · by Tobias</span>
+      <span lang="en">Nature Photography · Fine Art Prints · by Tobias</span>
+    </div>
+    <div class="footer-links">
+      <a href="#galerie" lang="de">Galerie</a>
+      <a href="#galerie" lang="en">Gallery</a>
+      <a href="#kalender" lang="de">Kalender</a>
+      <a href="#kalender" lang="en">Calendar</a>
+      <a href="#preise" lang="de">Preise</a>
+      <a href="#preise" lang="en">Pricing</a>
+      <a href="impressum.html" lang="de">Impressum</a>
+      <a href="impressum.html" lang="en">Legal Notice</a>
+      <a href="datenschutz.html" lang="de">Datenschutz</a>
+      <a href="datenschutz.html" lang="en">Privacy Policy</a>
+      <a href="agb.html">AGB / T&amp;C</a>
+      <a href="widerruf.html" lang="de">Widerruf</a>
+      <a href="widerruf.html" lang="en">Right of Withdrawal</a>
+    </div>
+    <p class="footer-copy">© Tobias – Fernblick Naturfotografie. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<!-- ── JavaScript ───────────────────────────────────────────── -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── Sprache ─────────────────────────────────────────────── */
+  const langBtn = document.getElementById('langToggle');
+  let lang = localStorage.getItem('fb-lang') || 'de';
+
+  function setLang(l) {
+    lang = l;
+    document.body.className = 'lang-' + l;
+    langBtn.textContent = l === 'de' ? 'EN' : 'DE';
+    localStorage.setItem('fb-lang', l);
+  }
+  setLang(lang);
+  langBtn.addEventListener('click', () => setLang(lang === 'de' ? 'en' : 'de'));
+
+  /* ── Kalender-Slider ─────────────────────────────────────── */
+  function initSlider(card) {
+    const slides   = card.querySelector('.cal-slides');
+    const imgs     = card.querySelectorAll('.cal-slides img');
+    const dotsWrap = card.querySelector('.cal-dots');
+    const tabs     = card.querySelectorAll('.cal-tab');
+    const total    = imgs.length;
+    let cur = 0;
+
+    /* Punkte erzeugen */
+    for (let i = 0; i < total; i++) {
+      const d = document.createElement('span');
+      d.className = 'cal-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    }
+
+    function goTo(idx) {
+      cur = ((idx % total) + total) % total;
+      slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
+      card.querySelectorAll('.cal-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === cur));
+      tabs.forEach((t, i) =>
+        t.classList.toggle('active', i === cur));
+    }
+
+    card.querySelector('.cal-prev').addEventListener('click', () => goTo(cur - 1));
+    card.querySelector('.cal-next').addEventListener('click', () => goTo(cur + 1));
+    tabs.forEach(t => t.addEventListener('click', () => goTo(+t.dataset.idx)));
+
+    /* Touch-Swipe */
+    let startX = 0;
+    slides.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    slides.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) goTo(dx < 0 ? cur + 1 : cur - 1);
+    }, { passive: true });
+  }
+
+  document.querySelectorAll('.cal-card[data-slider]').forEach(initSlider);
+
+  /* ── Galerie ─────────────────────────────────────────────── */
+  // Hier bleiben deine bestehenden Galerie-Bilder erhalten.
+  // Falls du ein separates galerie-Array hattest, trage es unten ein.
+  const galerieImages = [
+    // Beispiel – ersetze mit deinen echten Galerie-Bildnamen:
+    // { src: 'foto1.jpg', title: 'Hvide Sande' },
+  ];
+
+  const grid  = document.getElementById('galerieGrid');
+  const btnDE = document.getElementById('btnMehr');
+  const btnEN = document.getElementById('btnMore');
+  let shown = 0;
+  const PER_PAGE = 9;
+
+  function renderGalerie() {
+    const slice = galerieImages.slice(shown, shown + PER_PAGE);
+    slice.forEach(img => {
+      const div = document.createElement('div');
+      div.className = 'galerie-item';
+      div.innerHTML = '<img src="' + img.src + '" alt="' + (img.title || '') + '" loading="lazy">'
+        + '<div class="galerie-item-overlay"><span>' + (img.title || '') + '</span></div>';
+      grid.appendChild(div);
+    });
+    shown += slice.length;
+    const hide = shown >= galerieImages.length;
+    btnDE.style.display = hide ? 'none' : '';
+    btnEN.style.display = hide ? 'none' : '';
+  }
+
+  if (galerieImages.length) {
+    renderGalerie();
+    btnDE.addEventListener('click', renderGalerie);
+    btnEN.addEventListener('click', renderGalerie);
+  } else {
+    btnDE.style.display = 'none';
+    btnEN.style.display = 'none';
+  }
+
+})();
+</script>
+
+</body>
+</html>
