@@ -589,7 +589,7 @@ function buildKalender(){
     const dotsDiv=document.createElement('div');dotsDiv.className='slider-dots';
     slides.forEach((_,di)=>{const dot=document.createElement('span');dot.className='sdot'+(di===0?' active':'');dot.addEventListener('click',()=>goTo(di));dotsDiv.appendChild(dot);});
     card.appendChild(dotsDiv);
-    card.innerHTML+=`<div class="kalender-body"><div class="kalender-stil">${k.stil}</div><div class="kalender-name">${k.name}</div><div class="kalender-desc">${k.desc}</div><div class="kalender-price">ab 9,90 €</div><a href="#kontakt" class="kalender-cta">Jetzt anfragen</a></div>`;
+    const body=document.createElement('div');body.className='kalender-body';body.innerHTML=`<div class="kalender-stil">${k.stil}</div><div class="kalender-name">${k.name}</div><div class="kalender-desc">${k.desc}</div><div class="kalender-price">ab 9,90 €</div><a href="#kontakt" class="kalender-cta">Jetzt anfragen</a>`;card.appendChild(body);
     grid.appendChild(card);
     let cur=0;
     const tabs=tabsDiv.querySelectorAll('.stab'),dots=dotsDiv.querySelectorAll('.sdot');
