@@ -372,6 +372,15 @@
             <textarea id="f-nachricht" placeholder="Fragen, Wünsche, Stilpräferenz beim Kalender..."></textarea>
           </div>
           <p style="font-size:.72rem;color:var(--text2);margin-bottom:1rem">Nach deiner Anfrage sende ich dir einen PayPal-Zahlungslink. Nach Zahlungseingang erhältst du die Datei per E-Mail. Nur für privaten Gebrauch, keine kommerzielle Weitergabe.</p>
+          <div style="display:flex;align-items:flex-start;gap:.6rem;margin-bottom:1.2rem;background:rgba(184,150,62,.07);padding:.9rem;border-left:2px solid var(--gold3)">
+            <input type="checkbox" id="f-widerruf" style="margin-top:.2rem;accent-color:var(--gold);width:16px;height:16px;flex-shrink:0" required>
+            <label for="f-widerruf" style="font-size:.72rem;color:var(--text);line-height:1.6;cursor:pointer">
+              Ich stimme zu, dass mit der Ausführung des Vertrags (Lieferung der digitalen Datei) 
+              sofort begonnen wird, und ich bestätige, dass ich damit mein 
+              <a href="widerruf.html" target="_blank" style="color:var(--gold2)">Widerrufsrecht</a> verliere. 
+              Ich habe die <a href="datenschutz.html" target="_blank" style="color:var(--gold2)">Datenschutzerklärung</a> gelesen. *
+            </label>
+          </div>
           <button class="form-submit" id="form-btn" onclick="sendForm()">Anfrage senden</button>
         </div>
       </div>
@@ -409,7 +418,7 @@
     <div class="footer-inner">
       <div class="footer-logo">Fern<span>blick</span></div>
       <p class="footer-copy">© 2026 Fernblick Fotografie – Alle Rechte vorbehalten</p>
-      <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="widerruf.html">Widerruf</a></div>
     </div>
   </div>
 </footer>
