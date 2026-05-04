@@ -302,7 +302,7 @@
     <span class="section-label">Limitiert</span>
     <h2 class="section-title" style="color:var(--cream)">Fotokalender <em>2027</em></h2>
     <div class="title-bar"></div>
-    <p class="about-body" style="max-width:560px;margin-bottom:3rem">Vier exklusive Stile – von minimalistisch bis dramatisch. Jeder Kalender mit 13 Seiten meiner besten Aufnahmen, hochwertig gedruckt.</p>
+    <p class="about-body" style="max-width:560px;margin-bottom:3rem">Vier exklusive Stile – von minimalistisch bis dramatisch. Vier Stile als hochwertiges PDF – A4 oder A3, direkt nach Bestellung per E-Mail.</p>
     <div class="kalender-grid" id="kalenderGrid"></div>
   </div>
 </section>
@@ -311,20 +311,78 @@
   <div class="container">
     <div class="kontakt-inner">
       <div class="kontakt-form">
-        <span class="section-label">Kontakt</span>
+        <span class="section-label">Bestellen & Kontakt</span>
         <h2 class="section-title">Schreib <em>mir</em></h2>
         <div class="title-bar"></div>
-        <div class="form-group"><label>Name</label><input type="text" placeholder="Dein Name"/></div>
-        <div class="form-group"><label>E-Mail</label><input type="email" placeholder="deine@email.de"/></div>
-        <div class="form-group"><label>Betreff</label><select><option>Kalender bestellen</option><option>Print kaufen</option><option>Allgemeine Anfrage</option><option>Kooperation</option></select></div>
-        <div class="form-group"><label>Nachricht</label><textarea placeholder="Deine Nachricht..."></textarea></div>
-        <button class="form-submit">Absenden</button>
+
+        <!-- Erfolg / Fehler Meldung -->
+        <div id="form-success" style="display:none;background:rgba(184,150,62,.15);border:1px solid var(--gold);padding:1.2rem 1.5rem;margin-bottom:1.5rem">
+          <p style="color:var(--gold2);font-size:.95rem">✓ Nachricht gesendet! Ich melde mich innerhalb von 24 Stunden mit dem Zahlungslink und der Datei.</p>
+        </div>
+        <div id="form-error" style="display:none;background:rgba(200,50,50,.12);border:1px solid #c83232;padding:1.2rem 1.5rem;margin-bottom:1.5rem">
+          <p style="color:#f88;font-size:.95rem">⚠ Fehler beim Senden. Bitte versuche es erneut oder schreib direkt an tobias@fernblick.online</p>
+        </div>
+
+        <div id="form-fields">
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" id="f-name" placeholder="Dein Name" required/>
+          </div>
+          <div class="form-group">
+            <label>E-Mail *</label>
+            <input type="email" id="f-email" placeholder="deine@email.de" required/>
+          </div>
+          <div class="form-group">
+            <label>Ich möchte bestellen *</label>
+            <select id="f-produkt">
+              <optgroup label="── Fotokalender 2027 ──">
+                <option value="Kalender PDF A4 – 12,90 €">📅 Kalender PDF A4 – 12,90 €</option>
+                <option value="Kalender PDF A3 – 17,90 €">📅 Kalender PDF A3 – 17,90 €</option>
+                <option value="Kalender PDF Bundle A4+A3 – 24,90 €">📅 Bundle A4 + A3 – 24,90 €</option>
+              </optgroup>
+              <optgroup label="── Einzelbild Digital ──">
+                <option value="Einzelbild JPEG Web (Social Media) – 4,90 €">🖼 JPEG Web-Auflösung – 4,90 €</option>
+                <option value="Einzelbild JPEG Druckqualität (bis A3) – 14,90 €">🖼 JPEG Druckqualität bis A3 – 14,90 €</option>
+              </optgroup>
+              <optgroup label="── Sonstiges ──">
+                <option value="Allgemeine Anfrage">💬 Allgemeine Anfrage</option>
+                <option value="Kooperation / Lizenz">🤝 Kooperation / Lizenz</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-group" id="foto-feld" style="display:none">
+            <label>Welches Foto? (Bildtitel oder kurze Beschreibung)</label>
+            <input type="text" id="f-foto" placeholder="z.B. Leuchtturm Hvide Sande – Dramatischer Himmel"/>
+          </div>
+          <div class="form-group">
+            <label>Nachricht</label>
+            <textarea id="f-nachricht" placeholder="Fragen, Wünsche, Stilpräferenz beim Kalender..."></textarea>
+          </div>
+          <p style="font-size:.72rem;color:var(--text2);margin-bottom:1rem">Nach deiner Anfrage sende ich dir einen PayPal-Zahlungslink. Nach Zahlungseingang erhältst du die Datei per E-Mail. Nur für privaten Gebrauch, keine kommerzielle Weitergabe.</p>
+          <button class="form-submit" id="form-btn" onclick="sendForm()">Anfrage senden</button>
+        </div>
       </div>
+
       <div class="kontakt-info">
-        <h3>Lass uns in Kontakt treten</h3>
-        <p>Du interessierst dich für einen Print, einen Kalender oder möchtest mehr über meine Arbeit erfahren? Ich freue mich über jede Nachricht.</p>
-        <p>Antwort normalerweise innerhalb von 24 Stunden.</p>
-        <a class="kontakt-link" href="https://www.fernblick.online" target="_blank">
+        <h3>Preise & Lieferung</h3>
+        <p style="font-size:.82rem;line-height:1.9">
+          <span style="color:var(--gold2)">📅 Kalender 2027 als PDF</span><br>
+          A4 digital · · · · <strong style="color:var(--cream)">12,90 €</strong><br>
+          A3 digital · · · · <strong style="color:var(--cream)">17,90 €</strong><br>
+          Bundle A4+A3 · <strong style="color:var(--cream)">24,90 €</strong>
+        </p>
+        <p style="font-size:.82rem;line-height:1.9;margin-top:1.2rem">
+          <span style="color:var(--gold2)">🖼 Einzelbild als JPEG</span><br>
+          Web (Social/Screen) · <strong style="color:var(--cream)">4,90 €</strong><br>
+          Druckqualität bis A3 · <strong style="color:var(--cream)">14,90 €</strong>
+        </p>
+        <p style="font-size:.78rem;color:var(--text2);margin-top:1.5rem;line-height:1.7">
+          ✓ Zahlung per PayPal<br>
+          ✓ Lieferung per E-Mail innerhalb 24h<br>
+          ✓ Nur privater Gebrauch (keine Weiterveräußerung)<br>
+          ✓ Keine Versandkosten
+        </p>
+        <a class="kontakt-link" href="https://www.fernblick.online" target="_blank" style="margin-top:1.5rem">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           www.fernblick.online
         </a>
@@ -352,6 +410,52 @@
 </div>
 
 <script>
+// FORMSPREE
+document.getElementById('f-produkt').addEventListener('change', function(){
+  const isFoto = this.value.includes('JPEG');
+  document.getElementById('foto-feld').style.display = isFoto ? 'block' : 'none';
+});
+
+async function sendForm(){
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const produkt = document.getElementById('f-produkt').value;
+  const foto = document.getElementById('f-foto').value.trim();
+  const nachricht = document.getElementById('f-nachricht').value.trim();
+
+  if(!name || !email){ alert('Bitte Name und E-Mail ausfüllen.'); return; }
+
+  const btn = document.getElementById('form-btn');
+  btn.textContent = 'Sende...';
+  btn.disabled = true;
+
+  const body = {
+    name, email,
+    bestellung: produkt,
+    foto: foto || '–',
+    nachricht: nachricht || '–',
+    _subject: `Fernblick Anfrage: ${produkt} – ${name}`
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/mzdodadd', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(body)
+    });
+    if(res.ok){
+      document.getElementById('form-fields').style.display='none';
+      document.getElementById('form-success').style.display='block';
+    } else {
+      throw new Error();
+    }
+  } catch(e){
+    document.getElementById('form-error').style.display='block';
+    btn.textContent='Anfrage senden';
+    btn.disabled=false;
+  }
+}
+
 // NAV
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
